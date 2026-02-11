@@ -6,7 +6,7 @@
 
 ## 它到底是什麼？
 
-**API** 是 **Application Programming Interface** 的縮寫，白話說就是「軟體之間溝通的管道」。
+**[API](api.md)** 是 **Application Programming Interface** 的縮寫，白話說就是「軟體之間溝通的窗口」（詳細說明請看 [什麼是 API？](api.md)）。
 
 而 **API Key** 就是使用這個管道的「通行證」——一串長長的英文數字組合，像這樣：
 

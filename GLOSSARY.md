@@ -24,6 +24,7 @@
 | **npm** | 安裝軟體工具的地方 | App Store / 軟體商店 | 「用 **npm** install 就可以把 Claude Code 裝起來了。」 | [→ 詳細](terms/npm.md) |
 | **Terminal / CLI** | 用文字跟電腦對話的視窗 | 管家熱線（直撥電話） | 「打開 **Terminal**，輸入 claude 就能啟動了。」 | [→ 詳細](terms/terminal-cli.md) |
 | **Git Bash** | Windows 上更好用的 Terminal | Windows 的翻譯機 | 「你是 Windows 的話，建議裝 **Git Bash** 來用。」 | [→ 詳細](terms/git-bash.md) |
+| **API** | 軟體之間溝通的窗口 | 餐廳的服務窗口 | 「Claude Code 是透過 **API** 連上 Anthropic 的 AI 服務的。」 | [→ 詳細](terms/api.md) |
 | **API Key** | 讓 AI 認出你的通行證 | 員工證 / 門禁卡 | 「記得去後台產一組 **API Key**，不然 AI 不認識你。」 | [→ 詳細](terms/api-key.md) |
 | **環境變數** | 電腦裡存放設定值的地方 | 貼在冰箱上的便條紙 | 「把 API Key 存進**環境變數**，這樣每次開機就不用重貼。」 | [→ 詳細](terms/environment-variable.md) |
 
@@ -78,6 +79,7 @@
 | Terminal / CLI | 管家熱線（直撥電話） |
 | Node.js | 辦公室的水電基礎建設 |
 | npm | App Store / 軟體商店 |
+| API | 餐廳的服務窗口 |
 | API Key | 員工證 / 門禁卡 |
 | 環境變數 | 冰箱上的便條紙 |
 | Git | 後悔藥 / 時光機 |
