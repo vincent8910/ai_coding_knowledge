@@ -20,7 +20,7 @@
 
 ## 第一步：安裝 Node.js（辦公室的水電基礎建設）
 
-Node.js 是什麼？你不需要真的懂它——就把它想成**辦公室的水電**。Claude Code 是你的員工，但員工需要有水有電的辦公室才能上班。Node.js 就是那個辦公室。
+[Node.js](terms/nodejs.md) 是什麼？你不需要真的懂它——就把它想成**辦公室的水電**。Claude Code 是你的員工，但員工需要有水有電的辦公室才能上班。Node.js 就是那個辦公室。
 
 ### macOS 用戶
 
@@ -47,15 +47,30 @@ brew install node
 
 ### Windows 用戶
 
+**Step 1：安裝 Node.js**
+
 1. 打開瀏覽器，前往 [Node.js 官網](https://nodejs.org/)
 2. 點擊綠色的 **LTS** 按鈕下載
 3. 打開下載的 `.msi` 檔案
 4. 一路點「Next」→「I agree」→「Install」
 5. 完成！
 
+**Step 2：安裝 Git Bash（強烈推薦）**
+
+Windows 還需要一個好用的 [Terminal（終端機）](terms/terminal-cli.md)。內建的「命令提示字元」不太方便，建議裝 **[Git Bash](terms/git-bash.md)**——它會同時幫你裝好 [Git（後悔藥）](terms/git.md)，一舉兩得。
+
+1. 前往 [Git for Windows 官網](https://gitforwindows.org/) 下載
+2. 安裝過程一路用預設值，點「Next」到底
+3. 安裝完成後，在開始選單找到 **Git Bash** 並打開
+
+> 💡 **為什麼要裝 Git Bash？**
+> 因為大部分的教學（包括這份）都是用 macOS 風格的指令寫的。
+> Git Bash 讓你在 Windows 上也能用同樣的指令，不用再「翻譯」。
+> 詳細說明請看 **[什麼是 Git Bash？](terms/git-bash.md)**
+
 ### 確認安裝成功
 
-打開 Terminal（macOS）或命令提示字元（Windows），輸入：
+打開 Terminal（macOS）或 **Git Bash**（Windows），輸入：
 
 ```bash
 node --version
@@ -77,7 +92,7 @@ node --version
 npm install -g @anthropic-ai/claude-code
 ```
 
-> 💡 **npm 是什麼？**
+> 💡 **[npm](terms/npm.md) 是什麼？**
 > npm 就像一個「軟體商店」，跟 App Store 類似。
 > 安裝 Node.js 時它已經一起裝好了，你不用額外處理。
 
@@ -93,7 +108,7 @@ claude --version
 
 ## 第三步：取得 API Key（幫員工辦門禁卡）
 
-Claude Code 需要一張「員工證」才能上班——這就是 **API Key**。
+Claude Code 需要一張「員工證」才能上班——這就是 **[API Key](terms/api-key.md)**。
 
 ### 申請步驟
 
@@ -233,7 +248,7 @@ sudo npm install -g @anthropic-ai/claude-code
 
 ### Git：你的後悔藥 🕐
 
-如果你要讓 Claude Code 修改專案檔案，**強烈建議**先學會基本的 Git（版本控制工具）。
+如果你要讓 Claude Code 修改專案檔案，**強烈建議**先學會基本的 [Git（版本控制工具）](terms/git.md)。
 
 Git 就像**時光機**——不管 AI 改了什麼，你都可以「回到過去」。
 
