@@ -15,7 +15,7 @@
   - [USE_CASES.md](USE_CASES.md) — 12 個實戰場景
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
-- [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 16 個術語的白話解釋
+- [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 16 個術語的白話解釋 → [完整版](GLOSSARY.md)
 
 ---
 
@@ -76,7 +76,7 @@
 
 ## 快速導覽：從零到上手
 
-這份指南分成五站，建議照順序走：
+這份指南分成六站，建議照順序走：
 
 ### 🚉 第一站：你在這裡
 **[README.md](README.md)**（本文件）——了解全貌、搞懂為什麼值得學
@@ -92,6 +92,9 @@
 
 ### 🎯 第五站：開始做事
 **[USE_CASES.md](USE_CASES.md)**——實戰靈感庫，看看別人怎麼用、找到你的第一個任務
+
+### 📖 第六站：不懂就查
+**[GLOSSARY.md](GLOSSARY.md)**——專有名詞速查手冊，16 個術語的白話解釋 + 比喻對照總表
 
 ---
 
@@ -135,33 +138,18 @@ Level 3 ─ Agent 團隊（特遣隊）
 
 ## 📖 專有名詞速查（不懂的詞，來這裡查）
 
-讀文件時遇到看不懂的詞？點下去就有白話解釋：
+讀文件時遇到看不懂的詞？這裡列出最常碰到的，完整版請看 **[專有名詞速查手冊 →](GLOSSARY.md)**
 
-### 安裝會碰到的
-
-| 詞彙 | 一句話解釋 | 詳細說明 |
-|------|-----------|---------|
-| **Node.js** | 辦公室的水電基礎建設 | [→ 詳細](terms/nodejs.md) |
-| **npm** | 軟體商店（像 App Store） | [→ 詳細](terms/npm.md) |
-| **Terminal / CLI** | 管家熱線（用文字跟電腦對話） | [→ 詳細](terms/terminal-cli.md) |
-| **Git Bash** | Windows 的友善終端機 | [→ 詳細](terms/git-bash.md) |
-| **API Key** | 員工證 / 門禁卡 | [→ 詳細](terms/api-key.md) |
-| **環境變數** | 電腦的隱形備忘錄 | [→ 詳細](terms/environment-variable.md) |
-
-### 使用會碰到的
-
-| 詞彙 | 一句話解釋 | 詳細說明 |
-|------|-----------|---------|
-| **Prompt** | 你對 AI 說的那段話 | [→ 詳細](terms/prompt.md) |
-| **Markdown** | 最簡單的排版語言（.md 檔） | [→ 詳細](terms/markdown.md) |
+| 詞彙 | 比喻 | 詳細說明 |
+|------|------|---------|
+| **Terminal / CLI** | 管家熱線 | [→ 詳細](terms/terminal-cli.md) |
 | **Git** | 後悔藥 / 時光機 | [→ 詳細](terms/git.md) |
 | **GitHub** | 程式碼的 Google Drive | [→ 詳細](terms/github.md) |
-| **PR（Pull Request）** | 改完請你過目的審查流程 | [→ 詳細](terms/pull-request.md) |
-| **IDE** | 全配的辦公室（圖形編輯器） | [→ 詳細](terms/ide.md) |
-| **VS Code** | 免費的萬用編輯器 | [→ 詳細](terms/vscode.md) |
+| **API Key** | 員工證 / 門禁卡 | [→ 詳細](terms/api-key.md) |
+| **Prompt** | 跟同事交辦工作的那句話 | [→ 詳細](terms/prompt.md) |
 | **MCP** | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
-| **Agent** | 自主做事的 AI 員工 | [→ 詳細](terms/agent.md) |
-| **SuperClaude** | 員工培訓手冊 / 超級裝備包 | [→ 詳細](terms/superclaude.md) |
+
+> 👉 以上只列最常見的 6 個，全部 16 個術語（含比喻對照總表）請看 **[完整速查手冊](GLOSSARY.md)**
 
 ---
 
