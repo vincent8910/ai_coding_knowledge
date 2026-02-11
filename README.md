@@ -98,6 +98,34 @@ Level 3 ─ Agent 團隊（特遣隊）
 
 ---
 
+## 📖 專有名詞速查（不懂的詞，來這裡查）
+
+讀文件時遇到看不懂的詞？點下去就有白話解釋：
+
+### 安裝會碰到的
+
+| 詞彙 | 一句話解釋 | 詳細說明 |
+|------|-----------|---------|
+| **Node.js** | 辦公室的水電基礎建設 | [→ 詳細](terms/nodejs.md) |
+| **npm** | 軟體商店（像 App Store） | [→ 詳細](terms/npm.md) |
+| **Terminal / CLI** | 管家熱線（用文字跟電腦對話） | [→ 詳細](terms/terminal-cli.md) |
+| **Git Bash** | Windows 的友善終端機 | [→ 詳細](terms/git-bash.md) |
+| **API Key** | 員工證 / 門禁卡 | [→ 詳細](terms/api-key.md) |
+| **環境變數** | 電腦的隱形備忘錄 | [→ 詳細](terms/environment-variable.md) |
+
+### 使用會碰到的
+
+| 詞彙 | 一句話解釋 | 詳細說明 |
+|------|-----------|---------|
+| **Prompt** | 你對 AI 說的那段話 | [→ 詳細](terms/prompt.md) |
+| **Markdown** | 最簡單的排版語言（.md 檔） | [→ 詳細](terms/markdown.md) |
+| **Git** | 後悔藥 / 時光機 | [→ 詳細](terms/git.md) |
+| **MCP** | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
+| **Agent** | 自主做事的 AI 員工 | [→ 詳細](terms/agent.md) |
+| **SuperClaude** | 員工培訓手冊 / 超級裝備包 | [→ 詳細](terms/superclaude.md) |
+
+---
+
 ## 下一步
 
 準備好了嗎？前往 **[安裝指南 →](INSTALL.md)** 開始動手吧！
