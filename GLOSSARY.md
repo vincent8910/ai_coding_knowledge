@@ -67,6 +67,50 @@
 
 ---
 
+## 開會時會碰到的
+
+跟工程師開會、看 Slack 訊息時最常一頭霧水的詞：
+
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Frontend / Backend** | 使用者看到的畫面 / 背後處理資料的系統 | 餐廳外場 / 內場廚房 | 「這個**前端**就能處理，不用動**後端**。」 | [→ 詳細](terms/frontend-backend.md) |
+| **Bug / Debug** | 程式的問題 / 找問題並修好的過程 | 蟲 / 抓蟲 | 「這個 **bug** 我在 **debug** 了。」 | [→ 詳細](terms/bug-debug.md) |
+| **Deploy（部署）** | 把新功能放到正式環境讓使用者用 | 把新菜色端上桌 | 「等**部署**完客戶就能用新功能了。」 | [→ 詳細](terms/deploy.md) |
+| **Staging / Production** | 內部測試環境 / 正式環境 | 彩排 / 正式演出 | 「先上 **staging** 測，沒問題再推 **production**。」 | [→ 詳細](terms/staging-production.md) |
+| **Cache（快取）** | 把常用資料存在近的地方加快速度 | 冰箱裡的常備菜 | 「清一下 **cache** 就好了。」 | [→ 詳細](terms/cache.md) |
+| **Database（資料庫）** | 儲存和管理資料的系統 | 超級進化版的 Excel | 「我去查一下 **DB**，看資料還在不在。」 | [→ 詳細](terms/database.md) |
+| **Server（伺服器）** | 24 小時待命、專門服務請求的電腦 | 24 小時不打烊的服務生 | 「**Server** 掛了，網站打不開。」 | [→ 詳細](terms/server.md) |
+| **Auth（驗證/授權）** | Authentication 確認你是誰，Authorization 確認你能做什麼 | 門口警衛 / 樓層門禁 | 「**Auth** 做好了嗎？使用者登入有問題。」 | [→ 詳細](terms/auth.md) |
+
+---
+
+## 專案管理會碰到的
+
+PM 寫規格、追進度時會遇到的詞：
+
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Spec（規格）** | 功能的詳細描述文件 | 蓋房子前的藍圖 | 「**Spec** 寫好了嗎？沒有 spec 沒辦法開工。」 | [→ 詳細](terms/spec.md) |
+| **Scope（範圍）** | 這次要做什麼、不做什麼的界線 | 套餐的菜色清單 | 「這個不在 **scope** 裡面。」 | [→ 詳細](terms/scope.md) |
+| **Blocker** | 卡住進度、讓你做不下去的障礙 | 路中間的大石頭 | 「我這邊有 **blocker**，要等後端的 API。」 | [→ 詳細](terms/blocker.md) |
+| **Technical Debt（技術債）** | 為了趕工走捷徑，之後要花時間還的代價 | 先刷信用卡，之後再還 | 「這邊有**技術債**，要花時間還。」 | [→ 詳細](terms/technical-debt.md) |
+| **Refactor（重構）** | 重新整理程式碼，功能不變但更好維護 | 重新整理衣櫃 | 「這段 code 要 **refactor** 一下。」 | [→ 詳細](terms/refactor.md) |
+
+---
+
+## 出事時會碰到的
+
+系統出問題時工程師會說的詞：
+
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Hotfix** | 線上出問題時的緊急修復 | 先貼 OK 繃止血 | 「先出一版 **hotfix** 擋一下。」 | [→ 詳細](terms/hotfix.md) |
+| **Rollback（回滾）** | 把系統退回上一個正常版本 | 按 Ctrl+Z 復原 | 「新版有問題，先 **rollback**。」 | [→ 詳細](terms/rollback.md) |
+| **Downtime（停機）** | 系統無法使用的時間 | 店家掛出「裝修中」 | 「這次部署需要 10 分鐘 **downtime**。」 | [→ 詳細](terms/downtime.md) |
+| **Legacy Code** | 前人留下的老舊程式碼 | 上一任留下的爛攤子 | 「這段 **legacy code** 沒人敢動。」 | [→ 詳細](terms/legacy-code.md) |
+
+---
+
 ## 比喻對照總表
 
 一次看完所有比喻，幫你建立直覺：
@@ -95,6 +139,23 @@
 | Prompt | 跟同事交辦工作的那句話 |
 | Markdown | 輕量版的 Word |
 | VS Code | 超強的筆記本 |
+| Frontend / Backend | 餐廳外場 / 內場廚房 |
+| Bug / Debug | 蟲 / 抓蟲大作戰 |
+| Deploy（部署） | 把新菜色端上桌 |
+| Staging / Production | 彩排 / 正式演出 |
+| Cache（快取） | 冰箱裡的常備菜 |
+| Database（資料庫） | 超級進化版的 Excel |
+| Server（伺服器） | 24 小時不打烊的服務生 |
+| Authentication / Authorization | 門口警衛 / 樓層門禁 |
+| Spec（規格） | 蓋房子前的藍圖 |
+| Scope（範圍） | 套餐的菜色清單 |
+| Blocker | 路中間的大石頭 |
+| Technical Debt（技術債） | 先刷信用卡，之後再還 |
+| Refactor（重構） | 重新整理衣櫃 |
+| Hotfix | 先貼 OK 繃止血 |
+| Rollback（回滾） | 按 Ctrl+Z 復原 |
+| Downtime（停機） | 店家掛出「裝修中」 |
+| Legacy Code | 上一任留下的爛攤子 |
 
 ---
 
