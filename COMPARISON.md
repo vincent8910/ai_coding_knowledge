@@ -10,11 +10,11 @@
 
 在比較各家服務之前，先弄清楚兩種使用 AI 的方式：
 
-### IDE（整合開發環境）— 像全配的辦公室
+### [IDE](terms/ide.md)（整合開發環境）— 像全配的辦公室
 
 **IDE** 是 **Integrated Development Environment** 的縮寫。你可以把它想成一間**全配的辦公室**——有桌子（程式編輯器）、有白板（預覽視窗）、有助手（AI）、有檔案櫃（專案管理），全部整合在一個視窗裡。
 
-代表產品：**Cursor**、**Google Antigravity**、**VS Code + GitHub Copilot**
+代表產品：**Cursor**、**Google Antigravity**、**[VS Code](terms/vscode.md) + GitHub Copilot**
 
 ### CLI（命令列工具）— 像管家熱線
 

@@ -53,7 +53,7 @@
 
 | 你的角色 | 為什麼要學 Git/GitHub |
 |---------|---------------------|
-| **PM** | 技術規格放在 GitHub 上跟程式碼一起管理，改規格用 PR 讓工程師自動收到通知 |
+| **PM** | 技術規格放在 GitHub 上跟程式碼一起管理，改規格用 [PR（Pull Request）](terms/pull-request.md) 讓工程師自動收到通知 |
 | **行銷** | 網站文案、Landing Page 內容可以直接在 GitHub 上修改，不用等工程師排程 |
 | **行政** | 學會 Git 的存檔機制，讓 AI 修改檔案時永遠有後悔的餘地 |
 
@@ -143,6 +143,9 @@ Level 3 ─ Agent 團隊（特遣隊）
 | **Markdown** | 最簡單的排版語言（.md 檔） | [→ 詳細](terms/markdown.md) |
 | **Git** | 後悔藥 / 時光機 | [→ 詳細](terms/git.md) |
 | **GitHub** | 程式碼的 Google Drive | [→ 詳細](terms/github.md) |
+| **PR（Pull Request）** | 改完請你過目的審查流程 | [→ 詳細](terms/pull-request.md) |
+| **IDE** | 全配的辦公室（圖形編輯器） | [→ 詳細](terms/ide.md) |
+| **VS Code** | 免費的萬用編輯器 | [→ 詳細](terms/vscode.md) |
 | **MCP** | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
 | **Agent** | 自主做事的 AI 員工 | [→ 詳細](terms/agent.md) |
 | **SuperClaude** | 員工培訓手冊 / 超級裝備包 | [→ 詳細](terms/superclaude.md) |
