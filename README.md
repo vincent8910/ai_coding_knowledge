@@ -123,6 +123,7 @@ Level 3 ─ Agent 團隊（特遣隊）
 | **Prompt** | 你對 AI 說的那段話 | [→ 詳細](terms/prompt.md) |
 | **Markdown** | 最簡單的排版語言（.md 檔） | [→ 詳細](terms/markdown.md) |
 | **Git** | 後悔藥 / 時光機 | [→ 詳細](terms/git.md) |
+| **GitHub** | 程式碼的 Google Drive | [→ 詳細](terms/github.md) |
 | **MCP** | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
 | **Agent** | 自主做事的 AI 員工 | [→ 詳細](terms/agent.md) |
 | **SuperClaude** | 員工培訓手冊 / 超級裝備包 | [→ 詳細](terms/superclaude.md) |
