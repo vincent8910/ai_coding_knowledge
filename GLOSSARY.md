@@ -2,7 +2,7 @@
 
 > **讀文件時遇到看不懂的詞？來這裡查就對了。**
 >
-> 每個詞都有白話解釋、生活化比喻、官方連結。點進去就懂。
+> 每個詞都有白話解釋、生活化比喻、實際造句。點進去就懂。
 
 ---
 
@@ -18,14 +18,14 @@
 
 這些是你在 [安裝 Claude Code](INSTALL.md) 過程中會遇到的詞彙：
 
-| 詞彙 | 一句話解釋 | 比喻 | 詳細說明 |
-|------|-----------|------|---------|
-| **Node.js** | 讓 Claude Code 能運作的基礎環境 | 辦公室的水電 | [→ 詳細](terms/nodejs.md) |
-| **npm** | 安裝軟體工具的地方 | App Store / 軟體商店 | [→ 詳細](terms/npm.md) |
-| **Terminal / CLI** | 用文字跟電腦對話的視窗 | 管家熱線（直撥電話） | [→ 詳細](terms/terminal-cli.md) |
-| **Git Bash** | Windows 上更好用的 Terminal | Windows 的翻譯機 | [→ 詳細](terms/git-bash.md) |
-| **API Key** | 讓 AI 認出你的通行證 | 員工證 / 門禁卡 | [→ 詳細](terms/api-key.md) |
-| **環境變數** | 電腦裡存放設定值的地方 | 貼在冰箱上的便條紙 | [→ 詳細](terms/environment-variable.md) |
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Node.js** | 讓 Claude Code 能運作的基礎環境 | 辦公室的水電 | 「你先裝 **Node.js**，不然 Claude Code 跑不起來。」 | [→ 詳細](terms/nodejs.md) |
+| **npm** | 安裝軟體工具的地方 | App Store / 軟體商店 | 「用 **npm** install 就可以把 Claude Code 裝起來了。」 | [→ 詳細](terms/npm.md) |
+| **Terminal / CLI** | 用文字跟電腦對話的視窗 | 管家熱線（直撥電話） | 「打開 **Terminal**，輸入 claude 就能啟動了。」 | [→ 詳細](terms/terminal-cli.md) |
+| **Git Bash** | Windows 上更好用的 Terminal | Windows 的翻譯機 | 「你是 Windows 的話，建議裝 **Git Bash** 來用。」 | [→ 詳細](terms/git-bash.md) |
+| **API Key** | 讓 AI 認出你的通行證 | 員工證 / 門禁卡 | 「記得去後台產一組 **API Key**，不然 AI 不認識你。」 | [→ 詳細](terms/api-key.md) |
+| **環境變數** | 電腦裡存放設定值的地方 | 貼在冰箱上的便條紙 | 「把 API Key 存進**環境變數**，這樣每次開機就不用重貼。」 | [→ 詳細](terms/environment-variable.md) |
 
 ---
 
@@ -33,13 +33,13 @@
 
 這些是你開始用 Claude Code 之後會陸續碰到的詞彙：
 
-| 詞彙 | 一句話解釋 | 比喻 | 詳細說明 |
-|------|-----------|------|---------|
-| **Prompt** | 你輸入給 AI 的那段文字 | 跟同事交辦工作的那句話 | [→ 詳細](terms/prompt.md) |
-| **Markdown** | 用簡單符號排版的文字格式（.md 檔） | 輕量版的 Word | [→ 詳細](terms/markdown.md) |
-| **MCP** | 讓 AI 能連接外部工具的標準接口 | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
-| **Agent** | 能自主規劃和執行任務的 AI | 自主做事的正職員工 | [→ 詳細](terms/agent.md) |
-| **SuperClaude** | 讓 Claude Code 更強的開源設定框架 | 員工培訓手冊 / 超級裝備包 | [→ 詳細](terms/superclaude.md) |
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Prompt** | 你輸入給 AI 的那段文字 | 跟同事交辦工作的那句話 | 「你的 **Prompt** 寫太模糊了，AI 才會亂回答。」 | [→ 詳細](terms/prompt.md) |
+| **Markdown** | 用簡單符號排版的文字格式（.md 檔） | 輕量版的 Word | 「這份文件是 **Markdown** 格式，用 `#` 就能加標題。」 | [→ 詳細](terms/markdown.md) |
+| **MCP** | 讓 AI 能連接外部工具的標準接口 | AI 的感官器官 | 「裝了 **MCP** 之後，Claude 就能直接幫你讀 Google 日曆了。」 | [→ 詳細](terms/mcp.md) |
+| **Agent** | 能自主規劃和執行任務的 AI | 自主做事的正職員工 | 「這個 **Agent** 會自己拆任務、自己跑，你只要看結果就好。」 | [→ 詳細](terms/agent.md) |
+| **SuperClaude** | 讓 Claude Code 更強的開源設定框架 | 員工培訓手冊 / 超級裝備包 | 「裝了 **SuperClaude** 之後，Claude Code 回答更有結構了。」 | [→ 詳細](terms/superclaude.md) |
 
 ---
 
@@ -47,11 +47,11 @@
 
 當你需要跟團隊一起工作，這些詞就會出現：
 
-| 詞彙 | 一句話解釋 | 比喻 | 詳細說明 |
-|------|-----------|------|---------|
-| **Git** | 幫你記住每一次修改的版本控制工具 | 後悔藥 / 時光機 | [→ 詳細](terms/git.md) |
-| **GitHub** | 把 Git 存檔上傳到雲端的協作平台 | 程式碼的 Google Drive | [→ 詳細](terms/github.md) |
-| **PR（Pull Request）** | 改完後請同事審查的流程 | 公文會簽 | [→ 詳細](terms/pull-request.md) |
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Git** | 幫你記住每一次修改的版本控制工具 | 後悔藥 / 時光機 | 「改壞了沒關係，用 **Git** 可以回到上一版。」 | [→ 詳細](terms/git.md) |
+| **GitHub** | 把 Git 存檔上傳到雲端的協作平台 | 程式碼的 Google Drive | 「規格書放 **GitHub** 上，工程師改了你馬上看得到。」 | [→ 詳細](terms/github.md) |
+| **PR（Pull Request）** | 改完後請同事審查的流程 | 公文會簽 | 「我發了一個 **PR**，你幫我 review 一下再合併。」 | [→ 詳細](terms/pull-request.md) |
 
 ---
 
@@ -59,10 +59,10 @@
 
 在 [比較各家 AI 服務](COMPARISON.md) 時會看到的詞彙：
 
-| 詞彙 | 一句話解釋 | 比喻 | 詳細說明 |
-|------|-----------|------|---------|
-| **IDE** | 什麼都包的圖形化編輯軟體 | 全配的辦公室 | [→ 詳細](terms/ide.md) |
-| **VS Code** | 微軟出的免費萬用編輯器 | 超強的筆記本 | [→ 詳細](terms/vscode.md) |
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **IDE** | 什麼都包的圖形化編輯軟體 | 全配的辦公室 | 「Cursor 是一款 **IDE**，寫程式、跑 AI、管檔案都在同一個畫面。」 | [→ 詳細](terms/ide.md) |
+| **VS Code** | 微軟出的免費萬用編輯器 | 超強的筆記本 | 「先裝個 **VS Code**，很多外掛都支援它。」 | [→ 詳細](terms/vscode.md) |
 
 ---
 
