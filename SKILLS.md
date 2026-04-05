@@ -1,4 +1,4 @@
-# Skill 完整教學：從安裝到實戰
+# Skill 完整教學：從觀念到實戰
 
 > **讓 AI 考一張專業證照——以後不用每次從頭教，一鍵搞定重複工作。**
 >
@@ -9,12 +9,13 @@
 ## 大綱
 
 - [Skill 是什麼？為什麼要學？](#skill-是什麼為什麼要學) — 一張證照的威力
-- [前置準備：安裝 Antigravity](#前置準備安裝-antigravity) — Windows 安裝步驟
 - [Skill 的基本觀念](#skill-的基本觀念) — 一個檔案搞定一切
 - [動手做：建立你的第一個 Skill](#動手做建立你的第一個-skill) — 手把手教學
 - [實戰範例：15 個自建 Skill](#實戰範例15-個自建-skill) — 直接複製貼上就能用
 - [現成 Skill 商店](#現成-skill-商店去哪裡找別人做好的) — SkillHub.club & SkillHub 騰訊版
 - [下一步](#下一步)
+
+> 📌 **還沒安裝工具？** 請先到 [安裝指南](INSTALL.md) 裝好 Antigravity 或 Claude Code 再回來。
 
 ---
 
@@ -58,56 +59,6 @@
 
 ---
 
-## 前置準備：安裝 Antigravity
-
-> 我們用 [Google Antigravity](terms/antigravity.md) 作為主要工具。它是一個有圖形介面的桌面軟體，比黑色的 Terminal 視窗更親切。
-
-### Antigravity 是什麼？
-
-把它想成一張**AI 超級辦公桌**——桌上有螢幕、有資料夾、有文具，還內建一個隨時待命的 AI 助手。你坐下來、打開軟體，就能開始跟 AI 一起工作。
-
-### Windows 安裝步驟
-
-**Step 1：下載**
-
-1. 打開瀏覽器，前往 [Antigravity 官網](https://antigravity.google/)
-2. 點擊 **Download for Windows** 按鈕
-3. 等待下載完成（檔案大約幾百 MB，視網速而定）
-
-**Step 2：安裝**
-
-1. 打開下載的安裝檔（`.exe`）
-2. 如果 Windows 跳出「Windows 已保護您的電腦」提示，點「其他資訊」→「仍要執行」
-3. 一路點 **Next** → **I Agree** → **Install**
-4. 安裝完成，點 **Finish**
-
-**Step 3：登入**
-
-1. 打開 Antigravity（從桌面捷徑或開始選單找到它）
-2. 它會要求你用 **Google 帳號**登入
-3. 登入之後，你就會看到主畫面——一個有側邊欄和聊天區的介面
-
-**Step 4：確認安裝成功**
-
-在 Antigravity 的聊天區輸入：
-
-```
-你好，請自我介紹
-```
-
-如果 AI 回覆了，恭喜，安裝成功！ 🎉
-
-### 常見問題排雷
-
-| 問題 | 解法 |
-|------|------|
-| 下載很慢 | 公司網路可能有限制，請洽 IT 或換用手機熱點 |
-| 安裝時被防毒軟體擋住 | 暫時關閉防毒，或加入白名單 |
-| 登入失敗 | 確認 Google 帳號正常，試試用 Chrome 瀏覽器登入 |
-| 畫面一片空白 | 關掉重開，或檢查是否需要更新顯示卡驅動 |
-
----
-
 ## Skill 的基本觀念
 
 ### 一個 Skill = 一個資料夾 + 一個檔案
@@ -147,20 +98,29 @@ description: 讀取業績 Excel，按業務員分組統計，標出未達標的�
 
 ### Skill 放在哪裡？
 
-在 Antigravity 中，Skill 有兩個存放位置：
+Skill 是**跨工具通用**的——同一份 SKILL.md 在不同工具裡只是放的位置不同：
+
+**如果你用 Antigravity：**
 
 | 位置 | 路徑 | 用途 |
 |------|------|------|
 | **全域**（所有專案都能用） | `~/.gemini/antigravity/skills/你的Skill名稱/` | 像你的個人證照，走到哪都帶著 |
 | **專案內**（只有該專案能用） | `專案資料夾/.agents/skills/你的Skill名稱/` | 像公司內部的 SOP，只在這個專案用 |
 
+**如果你用 Claude Code：**
+
+| 位置 | 路徑 | 用途 |
+|------|------|------|
+| **全域**（所有專案都能用） | `~/.claude/skills/你的Skill名稱/` | 像你的個人證照，走到哪都帶著 |
+| **專案內**（只有該專案能用） | `專案資料夾/.claude/skills/你的Skill名稱/` | 像公司內部的 SOP，只在這個專案用 |
+
 > 💡 **`~` 是什麼？** 在 Windows 上，`~` 代表你的使用者資料夾，通常是 `C:\Users\你的使用者名稱`。
 
-> 💡 **Claude Code 用戶**：如果你也用 Claude Code，Skill 放在 `~/.claude/skills/` 裡。Skill 檔案格式一模一樣，複製過去就能用。
+> 💡 **Skill 內容完全一樣**，只是放的資料夾不同。如果你兩個工具都用，把同一份 SKILL.md 複製到兩邊就好。
 
 ### 怎麼呼叫 Skill？
 
-在 Antigravity 的聊天區裡，輸入：
+在聊天區裡，輸入：
 
 ```
 /你的Skill名稱
@@ -168,7 +128,7 @@ description: 讀取業績 Excel，按業務員分組統計，標出未達標的�
 
 例如你建了一個叫 `業績分析` 的 Skill，就輸入 `/業績分析`。
 
-AI 就會自動按照 Skill 裡的規則來工作。
+AI 就會自動按照 Skill 裡的規則來工作。不管你用 Antigravity 還是 Claude Code，呼叫方式一模一樣。
 
 ---
 
@@ -178,13 +138,23 @@ AI 就會自動按照 Skill 裡的規則來工作。
 
 ### Step 1：建立資料夾
 
+**Antigravity 用戶：**
+
 打開檔案總管（按 `Win + E`），導航到：
 
 ```
 C:\Users\你的使用者名稱\.gemini\antigravity\skills\
 ```
 
-> ⚠️ **找不到 `.gemini` 資料夾？** 因為它是隱藏資料夾。在檔案總管上方點「檢視」→ 勾選「隱藏的項目」就會看到了。如果還是沒有，自己建一個就好。
+**Claude Code 用戶：**
+
+打開檔案總管（按 `Win + E`），導航到：
+
+```
+C:\Users\你的使用者名稱\.claude\skills\
+```
+
+> ⚠️ **找不到資料夾？** 因為以 `.` 開頭的是隱藏資料夾。在檔案總管上方點「檢視」→ 勾選「隱藏的項目」就會看到了。如果還是沒有，自己建一個就好。
 
 在 `skills` 資料夾裡，新增一個資料夾，取名叫 `email-writer`。
 
@@ -221,7 +191,7 @@ description: 幫忙撰寫專業但親切的商務 Email。當使用者要求寫�
 
 ### Step 4：測試！
 
-1. 重新啟動 Antigravity（關掉再打開）
+1. 重新啟動你的工具（Antigravity 關掉再打開 / Claude Code 重新輸入 `claude`）
 2. 在聊天區輸入：
 
 ```
@@ -237,6 +207,8 @@ description: 幫忙撰寫專業但親切的商務 Email。當使用者要求寫�
 ## 實戰範例：15 個自建 Skill
 
 > 以下每個範例都可以**直接複製貼上**使用。建立方式跟上面的 Email 助手一樣：建資料夾 → 建 SKILL.md → 貼內容 → 重啟。
+>
+> **路徑提示**：範例中的路徑以 Antigravity 為主。如果你用 Claude Code，把 `~/.gemini/antigravity/skills/` 換成 `~/.claude/skills/` 即可，SKILL.md 內容完全不用改。
 
 ### 📊 數據查詢與分析類
 
@@ -871,7 +843,7 @@ description: 根據提案內容產出說服性簡報架構。當使用者要求�
 2. 點 **Copy SKILL.md** 按鈕
 3. 到你的 Skill 資料夾建立對應的子資料夾
 4. 新建 `SKILL.md` 檔案，把內容貼進去
-5. 重啟 Antigravity
+5. 重啟你的工具
 
 **方法二：用指令安裝（進階）**
 
@@ -948,21 +920,6 @@ npx @skill-hub/cli install skill名稱
 4. 把 SKILL.md 檔案放到你的 Skill 資料夾裡
 
 > 💡 **建議**：兩個商店都逛逛。SkillHub.club 選擇多、品質評分透明；騰訊版中文搜尋方便。
-
----
-
-## 小提醒：Skill 的跨工具通用性
-
-前面提過，Skill 是跨工具通用的。如果你的同事有人用 Claude Code、有人用 Antigravity，不用擔心——同一份 SKILL.md 只要放到對的資料夾就能用：
-
-| 工具 | Skill 資料夾路徑 |
-|------|-----------------|
-| **Antigravity**（全域） | `~/.gemini/antigravity/skills/skill名稱/` |
-| **Antigravity**（專案） | `專案/.agents/skills/skill名稱/` |
-| **Claude Code**（全域） | `~/.claude/skills/skill名稱/` |
-| **Claude Code**（專案） | `專案/.claude/skills/skill名稱/` |
-
-**Skill 的內容完全一樣，只是放的位置不同。**
 
 ---
 
