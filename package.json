@@ -1,0 +1,13 @@
+{
+  "name": "ai-coding-knowledge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Coding 非技術人員入門指南",
+  "scripts": {
+    "build": "node scripts/build-site-simple.js",
+    "build:marked": "node scripts/build-site.js"
+  },
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "AI Coding 入門指南",
+  "short_name": "AI 入門指南",
+  "description": "讓 AI 從顧問變員工——非技術人員的 AI 工具學習路徑",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#faf6f0",
+  "theme_color": "#d4700a",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗺️%3C/text%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

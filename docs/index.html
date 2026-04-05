@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AI Coding 入門指南</title>
+  <meta name="description" content="讓 AI 從顧問變員工——非技術人員的 AI 工具學習路徑">
+  <meta property="og:title" content="AI Coding 入門指南">
+  <meta property="og:description" content="讓 AI 從顧問變員工——非技術人員的 AI 工具學習路徑">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf6f0" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AI 入門指南">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Playfair+Display:wght@700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf6f0;
+      --bg-warm: #f5ede0;
+      --bg-card: #ffffff;
+      --bg-card-hover: #fffdf9;
+      --bg-overlay: rgba(250, 246, 240, 0.95);
+      --text: #2c1810;
+      --text-secondary: #6b5344;
+      --text-tertiary: #a08878;
+      --border: #e8ddd0;
+      --border-light: #f0e8dc;
+      --accent: #d4700a;
+      --accent-warm: #e8890f;
+      --accent-soft: #fff3e0;
+      --accent-glow: rgba(212, 112, 10, 0.12);
+      --station-line: #d4700a;
+      --station-dot: #d4700a;
+      --station-dot-inactive: #cdbfb0;
+      --tag-bg: #f5ede0;
+      --code-bg: #fdf6ee;
+      --shadow-sm: 0 1px 3px rgba(44, 24, 16, 0.06);
+      --shadow-md: 0 4px 16px rgba(44, 24, 16, 0.08);
+      --shadow-lg: 0 8px 32px rgba(44, 24, 16, 0.1);
+      --shadow-glow: 0 0 24px rgba(212, 112, 10, 0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #1a1410;
+        --bg-warm: #231c15;
+        --bg-card: #2a2018;
+        --bg-card-hover: #332820;
+        --bg-overlay: rgba(26, 20, 16, 0.95);
+        --text: #f0e8dc;
+        --text-secondary: #b8a898;
+        --text-tertiary: #7a6a5a;
+        --border: #3a3028;
+        --border-light: #2e2520;
+        --accent: #e8960f;
+        --accent-warm: #f0a020;
+        --accent-soft: #3a2810;
+        --accent-glow: rgba(232, 150, 15, 0.15);
+        --station-line: #e8960f;
+        --station-dot: #e8960f;
+        --station-dot-inactive: #5a4a3a;
+        --tag-bg: #2e2520;
+        --code-bg: #231c15;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+        --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+        --shadow-glow: 0 0 24px rgba(232, 150, 15, 0.2);
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #1a1410;
+      --bg-warm: #231c15;
+      --bg-card: #2a2018;
+      --bg-card-hover: #332820;
+      --bg-overlay: rgba(26, 20, 16, 0.95);
+      --text: #f0e8dc;
+      --text-secondary: #b8a898;
+      --text-tertiary: #7a6a5a;
+      --border: #3a3028;
+      --border-light: #2e2520;
+      --accent: #e8960f;
+      --accent-warm: #f0a020;
+      --accent-soft: #3a2810;
+      --accent-glow: rgba(232, 150, 15, 0.15);
+      --station-line: #e8960f;
+      --station-dot: #e8960f;
+      --station-dot-inactive: #5a4a3a;
+      --tag-bg: #2e2520;
+      --code-bg: #231c15;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --shadow-glow: 0 0 24px rgba(232, 150, 15, 0.2);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: var(--grain);
+      background-repeat: repeat;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ===== Top Bar ===== */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-overlay);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0 16px;
+    }
+
+    .top-bar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .site-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--accent);
+      cursor: pointer;
+      letter-spacing: -0.5px;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.15s;
+    }
+
+    .site-title:active { opacity: 0.7; }
+
+    .top-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-toggle {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--text-secondary);
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 0.15s, background 0.15s;
+    }
+
+    .theme-toggle:active { transform: scale(0.9); }
+    .theme-toggle:hover { background: var(--border); }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .wide-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HOME VIEW ===== */
+    #home-view {
+      padding-bottom: 60px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 20px 40px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 48px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ===== Skill Map ===== */
+    .skill-map {
+      padding: 20px 0 0;
+    }
+
+    .skill-map-title {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+    }
+
+    .station-list {
+      position: relative;
+      padding: 0 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* The metro line */
+    .station-list::before {
+      content: '';
+      position: absolute;
+      left: 39px;
+      top: 24px;
+      bottom: 24px;
+      width: 3px;
+      background: linear-gradient(
+        to bottom,
+        var(--station-line),
+        var(--station-line) 85%,
+        var(--station-dot-inactive)
+      );
+      border-radius: 2px;
+    }
+
+    @media (min-width: 640px) {
+      .station-list::before {
+        left: 59px;
+      }
+    }
+
+    .station-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 14px 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      transition: transform 0.15s;
+    }
+
+    .station-card:active { transform: translateX(4px); }
+
+    .station-dot {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 3px solid var(--station-dot);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      z-index: 1;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .station-card:hover .station-dot {
+      transform: scale(1.12);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent-warm);
+    }
+
+    @media (min-width: 640px) {
+      .station-dot {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+      }
+    }
+
+    .station-info {
+      flex: 1;
+      padding: 4px 0;
+    }
+
+    .station-number {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 2px;
+    }
+
+    .station-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .station-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .station-arrow {
+      flex-shrink: 0;
+      color: var(--text-tertiary);
+      font-size: 18px;
+      margin-top: 12px;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .station-card:hover .station-arrow {
+      transform: translateX(4px);
+      color: var(--accent);
+    }
+
+    /* ===== CONTENT VIEW ===== */
+    #content-view {
+      display: none;
+      padding-bottom: 60px;
+    }
+
+    .content-header {
+      padding: 24px 0 20px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 28px;
+    }
+
+    .content-progress {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .progress-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+    }
+
+    .content-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .content-emoji {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .content-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    /* Navigation */
+    .content-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      gap: 12px;
+    }
+
+    .content-nav.top-nav {
+      padding-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: all 0.15s;
+      font-family: var(--font-body);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-btn:active { transform: scale(0.97); }
+
+    .nav-btn.disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .nav-btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .nav-btn.primary:hover {
+      background: var(--accent-warm);
+      border-color: var(--accent-warm);
+      color: #fff;
+    }
+
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 0;
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      font-family: var(--font-body);
+      transition: opacity 0.15s;
+    }
+
+    .back-home-btn:active { opacity: 0.6; }
+
+    /* ===== Mini Map (sidebar) ===== */
+    .mini-map {
+      display: none;
+    }
+
+    @media (min-width: 1100px) {
+      .mini-map {
+        display: block;
+        position: fixed;
+        left: calc(50% + 400px);
+        top: 80px;
+        width: 180px;
+      }
+
+      .mini-map-title {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--text-tertiary);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+      }
+
+      .mini-map-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 0;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: color 0.15s;
+        color: var(--text-tertiary);
+        font-size: 13px;
+      }
+
+      .mini-map-item:hover { color: var(--accent); }
+
+      .mini-map-item.active {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .mini-map-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--station-dot-inactive);
+        flex-shrink: 0;
+        transition: background 0.15s, transform 0.15s;
+      }
+
+      .mini-map-item.active .mini-map-dot {
+        background: var(--accent);
+        transform: scale(1.3);
+      }
+    }
+
+    /* ===== Rendered Markdown Content ===== */
+    .md-content {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text);
+    }
+
+    .md-content h1 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      margin: 36px 0 16px;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    .md-content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 36px 0 14px;
+      color: var(--text);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .md-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--text);
+    }
+
+    .md-content h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 24px 0 8px;
+      color: var(--text);
+    }
+
+    .md-content p {
+      margin: 14px 0;
+    }
+
+    .md-content a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .md-content a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .md-content a[data-term] {
+      color: var(--accent);
+      cursor: pointer;
+      border-bottom: 1px dashed var(--accent);
+    }
+
+    .md-content a[data-term]:hover {
+      border-bottom-style: solid;
+    }
+
+    .md-content strong { font-weight: 700; }
+
+    .md-content blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      margin: 20px 0;
+      background: var(--accent-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .md-content blockquote p:first-child { margin-top: 0; }
+    .md-content blockquote p:last-child { margin-bottom: 0; }
+
+    .md-content ul, .md-content ol {
+      margin: 14px 0;
+      padding-left: 24px;
+    }
+
+    .md-content li {
+      margin: 6px 0;
+    }
+
+    .md-content code {
+      font-family: var(--font-mono);
+      background: var(--code-bg);
+      border: 1px solid var(--border-light);
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 0.88em;
+      color: var(--accent);
+    }
+
+    .md-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .md-content pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: var(--text);
+      font-size: inherit;
+    }
+
+    .md-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      overflow-x: auto;
+      display: block;
+    }
+
+    @media (min-width: 640px) {
+      .md-content table { display: table; }
+    }
+
+    .md-content th, .md-content td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .md-content th {
+      background: var(--tag-bg);
+      font-weight: 700;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .md-content hr {
+      border: none;
+      border-top: 2px solid var(--border-light);
+      margin: 32px 0;
+    }
+
+    .md-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== Term Sidebar ===== */
+    .term-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+
+    .term-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .term-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(420px, 90vw);
+      background: var(--bg);
+      z-index: 201;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .term-panel.open {
+      transform: translateX(0);
+    }
+
+    .term-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .term-panel-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .term-panel-close {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--text-secondary);
+      -webkit-tap-highlight-color: transparent;
+      flex-shrink: 0;
+      margin-left: 12px;
+      transition: background 0.15s;
+    }
+
+    .term-panel-close:hover { background: var(--border); }
+
+    .term-panel-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      text-align: center;
+      padding: 32px 20px 48px;
+      border-top: 1px solid var(--border-light);
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.8;
+    }
+
+    .footer-name {
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    .footer-links a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-sep { margin: 0 6px; }
+
+    .footer-built a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+
+    .footer-built a:hover { color: var(--accent); }
+
+    /* ===== Loading ===== */
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-tertiary);
+    }
+
+    .loading-spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto 16px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.4s ease-out both;
+    }
+
+    .station-card:nth-child(1) { animation-delay: 0.05s; }
+    .station-card:nth-child(2) { animation-delay: 0.1s; }
+    .station-card:nth-child(3) { animation-delay: 0.15s; }
+    .station-card:nth-child(4) { animation-delay: 0.2s; }
+    .station-card:nth-child(5) { animation-delay: 0.25s; }
+    .station-card:nth-child(6) { animation-delay: 0.3s; }
+    .station-card:nth-child(7) { animation-delay: 0.35s; }
+
+    /* ===== Mobile tweaks ===== */
+    @media (max-width: 480px) {
+      .hero { padding: 32px 16px 28px; }
+      .hero h1 { font-size: 28px; }
+      .content-title { font-size: 24px; }
+      .md-content h2 { font-size: 19px; }
+      .nav-btn { padding: 8px 14px; font-size: 13px; }
+    }
+
+    /* ===== Scrollbar ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="site-title" id="site-title">AI Coding 入門指南</div>
+    <div class="top-bar-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="切換深色模式" title="切換深色模式">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Home View -->
+<div id="home-view">
+  <div class="hero">
+    <div class="hero-badge">🗺️ 學習路徑</div>
+    <h1>讓 AI 從<span class="accent">顧問</span>變<span class="accent">員工</span></h1>
+    <p>非技術人員的 AI 工具入門指南。<br>7 站學習路徑，從零開始，照順序走就對了。</p>
+  </div>
+
+  <div class="skill-map">
+    <div class="skill-map-title">— 學習路徑 —</div>
+    <div class="station-list" id="station-list">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        載入中...
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-name">Vincent Chen</div>
+    <div class="footer-links">
+      <a href="https://github.com/vincent8910" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://t.me/vincent8910" target="_blank" rel="noopener">Telegram</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="mailto:vincent0935@gmail.com">Email</a>
+    </div>
+    <div class="footer-built">Built with <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a></div>
+  </footer>
+</div>
+
+<!-- Content View -->
+<div id="content-view">
+  <div class="wide-container" style="position:relative">
+    <div class="container">
+      <div class="content-header" id="content-header">
+        <button class="back-home-btn" id="back-home-btn">← 回到學習路徑</button>
+        <div class="content-progress" id="content-progress">
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="progress-text" id="progress-text"></div>
+        </div>
+        <div class="content-title-row">
+          <span class="content-emoji" id="content-emoji"></span>
+          <h1 class="content-title" id="content-title"></h1>
+        </div>
+      </div>
+
+      <nav class="content-nav top-nav" id="top-nav"></nav>
+
+      <div class="md-content" id="md-content">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          載入中...
+        </div>
+      </div>
+
+      <nav class="content-nav" id="bottom-nav"></nav>
+    </div>
+
+    <!-- Mini Map -->
+    <div class="mini-map" id="mini-map"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-name">Vincent Chen</div>
+    <div class="footer-links">
+      <a href="https://github.com/vincent8910" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://t.me/vincent8910" target="_blank" rel="noopener">Telegram</a>
+      <span class="footer-sep">&middot;</span>
+      <a href="mailto:vincent0935@gmail.com">Email</a>
+    </div>
+    <div class="footer-built">Built with <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a></div>
+  </footer>
+</div>
+
+<!-- Term Sidebar -->
+<div class="term-overlay" id="term-overlay"></div>
+<div class="term-panel" id="term-panel">
+  <div class="term-panel-header">
+    <div class="term-panel-title" id="term-panel-title"></div>
+    <button class="term-panel-close" id="term-panel-close" aria-label="關閉">&times;</button>
+  </div>
+  <div class="term-panel-body md-content" id="term-panel-body"></div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  let PAGES = [];
+  let TERMS = {};
+  let currentPageId = null;
+
+  const $ = id => document.getElementById(id);
+
+  const homeView = $('home-view');
+  const contentView = $('content-view');
+  const stationList = $('station-list');
+  const mdContent = $('md-content');
+  const contentTitle = $('content-title');
+  const contentEmoji = $('content-emoji');
+  const progressFill = $('progress-fill');
+  const progressText = $('progress-text');
+  const topNav = $('top-nav');
+  const bottomNav = $('bottom-nav');
+  const miniMap = $('mini-map');
+  const termOverlay = $('term-overlay');
+  const termPanel = $('term-panel');
+  const termPanelTitle = $('term-panel-title');
+  const termPanelBody = $('term-panel-body');
+  const termPanelClose = $('term-panel-close');
+  const backHomeBtn = $('back-home-btn');
+  const siteTitle = $('site-title');
+
+  // ===== Theme =====
+  const themeToggle = $('theme-toggle');
+  const themeIcon = $('theme-icon');
+
+  function getThemePref() { return localStorage.getItem('theme') || 'auto'; }
+
+  function applyTheme(pref) {
+    const root = document.documentElement;
+    if (pref === 'auto') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', pref);
+    updateThemeIcon(pref);
+    localStorage.setItem('theme', pref);
+  }
+
+  function updateThemeIcon(pref) {
+    if (pref === 'dark') themeIcon.textContent = '☀️';
+    else if (pref === 'light') themeIcon.textContent = '🌙';
+    else {
+      themeIcon.textContent = window.matchMedia('(prefers-color-scheme: dark)').matches ? '☀️' : '🌙';
+    }
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const c = getThemePref();
+    applyTheme(c === 'auto' ? 'dark' : c === 'dark' ? 'light' : 'auto');
+  });
+
+  applyTheme(getThemePref());
+
+  // ===== Data Loading =====
+  async function loadData() {
+    try {
+      const [pagesResp, termsResp] = await Promise.all([
+        fetch('pages.json'),
+        fetch('terms.json'),
+      ]);
+      PAGES = await pagesResp.json();
+      TERMS = await termsResp.json();
+    } catch (e) {
+      stationList.innerHTML = '<div class="loading" style="color:var(--accent)">載入失敗，請重新整理頁面。</div>';
+      console.error('Failed to load data:', e);
+      return;
+    }
+    buildStationList();
+    buildMiniMap();
+    handleRoute();
+  }
+
+  // ===== Station List (Home) =====
+  // 外部連結頁面（不在站內顯示，直接跳轉外部網站）
+  const EXTERNAL_PAGES = {
+    glossary: 'https://vincent8910.github.io/wtf-is/',
+  };
+
+  function buildStationList() {
+    stationList.innerHTML = PAGES.map((p, i) => {
+      const isExternal = EXTERNAL_PAGES[p.id];
+      const arrow = isExternal ? '↗' : '→';
+      const extraAttr = isExternal ? ` data-external="${EXTERNAL_PAGES[p.id]}"` : '';
+      return `
+      <div class="station-card animate-in" data-page="${p.id}"${extraAttr} tabindex="0" role="button" aria-label="第 ${i + 1} 站：${p.title}">
+        <div class="station-dot">${p.emoji}</div>
+        <div class="station-info">
+          <div class="station-number">第 ${i + 1} 站</div>
+          <div class="station-name">${esc(p.title)}${isExternal ? ' <span style="font-size:12px;color:var(--text-tertiary)">(外部網站)</span>' : ''}</div>
+          <div class="station-desc">${esc(p.desc)}</div>
+        </div>
+        <div class="station-arrow">${arrow}</div>
+      </div>`;
+    }).join('');
+
+    stationList.addEventListener('click', e => {
+      const card = e.target.closest('.station-card');
+      if (!card) return;
+      if (card.dataset.external) {
+        window.open(card.dataset.external, '_blank', 'noopener');
+        return;
+      }
+      navigateTo('page-' + card.dataset.page);
+    });
+
+    stationList.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const card = e.target.closest('.station-card');
+        if (!card) return;
+        if (card.dataset.external) {
+          window.open(card.dataset.external, '_blank', 'noopener');
+          return;
+        }
+        navigateTo('page-' + card.dataset.page);
+      }
+    });
+  }
+
+  // ===== Mini Map =====
+  function buildMiniMap() {
+    miniMap.innerHTML = '<div class="mini-map-title">學習路徑</div>' +
+      PAGES.map((p, i) => `
+        <div class="mini-map-item" data-page="${p.id}">
+          <div class="mini-map-dot"></div>
+          <span>${p.emoji} ${esc(p.title)}</span>
+        </div>
+      `).join('');
+
+    miniMap.addEventListener('click', e => {
+      const item = e.target.closest('.mini-map-item');
+      if (!item) return;
+      const ext = EXTERNAL_PAGES[item.dataset.page];
+      if (ext) { window.open(ext, '_blank', 'noopener'); return; }
+      navigateTo('page-' + item.dataset.page);
+    });
+  }
+
+  function updateMiniMap(pageId) {
+    miniMap.querySelectorAll('.mini-map-item').forEach(item => {
+      item.classList.toggle('active', item.dataset.page === pageId);
+    });
+  }
+
+  // ===== Show Page Content =====
+  function showPage(pageId) {
+    const idx = PAGES.findIndex(p => p.id === pageId);
+    if (idx === -1) return showHome();
+
+    const page = PAGES[idx];
+    currentPageId = pageId;
+
+    document.title = `${page.title} — AI Coding 入門指南`;
+    contentTitle.textContent = page.title;
+    contentEmoji.textContent = page.emoji;
+
+    // Progress
+    const pct = ((idx + 1) / PAGES.length * 100).toFixed(0);
+    progressFill.style.width = pct + '%';
+    progressText.textContent = `${idx + 1} / ${PAGES.length}`;
+
+    // Content
+    mdContent.innerHTML = page.content;
+    bindContentLinks(mdContent);
+
+    // Navigation
+    const prevPage = idx > 0 ? PAGES[idx - 1] : null;
+    const nextPage = idx < PAGES.length - 1 ? PAGES[idx + 1] : null;
+    const navHTML = buildNavHTML(prevPage, nextPage);
+    topNav.innerHTML = navHTML;
+    bottomNav.innerHTML = navHTML;
+    bindNavButtons(topNav);
+    bindNavButtons(bottomNav);
+
+    // Mini map
+    updateMiniMap(pageId);
+
+    // Show content view
+    homeView.style.display = 'none';
+    contentView.style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  function buildNavHTML(prev, next) {
+    const prevBtn = prev
+      ? `<button class="nav-btn" data-page="${prev.id}">← ${esc(prev.title)}</button>`
+      : `<button class="nav-btn disabled">← 上一站</button>`;
+    const nextBtn = next
+      ? `<button class="nav-btn primary" data-page="${next.id}">${esc(next.title)} →</button>`
+      : `<button class="nav-btn disabled">已到終點 🎉</button>`;
+    return prevBtn + nextBtn;
+  }
+
+  function bindNavButtons(container) {
+    container.querySelectorAll('.nav-btn[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => navigateTo('page-' + btn.dataset.page));
+    });
+  }
+
+  // ===== Bind Content Links =====
+  function bindContentLinks(container) {
+    // Term links
+    container.querySelectorAll('a[data-term]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const termId = a.dataset.term;
+        openTermPanel(termId);
+      });
+    });
+
+    // Page links
+    container.querySelectorAll('a[data-page]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        navigateTo('page-' + a.dataset.page);
+      });
+    });
+  }
+
+  // ===== Term Panel =====
+  function openTermPanel(termId) {
+    const term = TERMS[termId];
+    if (!term) return;
+
+    termPanelTitle.textContent = term.title;
+    termPanelBody.innerHTML = term.content;
+    bindContentLinks(termPanelBody);
+
+    termOverlay.classList.add('open');
+    termPanel.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTermPanel() {
+    termOverlay.classList.remove('open');
+    termPanel.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  termOverlay.addEventListener('click', closeTermPanel);
+  termPanelClose.addEventListener('click', closeTermPanel);
+
+  // ===== Home =====
+  function showHome() {
+    currentPageId = null;
+    document.title = 'AI Coding 入門指南';
+    homeView.style.display = 'block';
+    contentView.style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+
+  backHomeBtn.addEventListener('click', () => navigateTo('home'));
+  siteTitle.addEventListener('click', () => navigateTo('home'));
+
+  // ===== Routing =====
+  function navigateTo(hash) {
+    history.pushState(null, '', '#' + hash);
+    handleRoute();
+  }
+
+  function handleRoute() {
+    closeTermPanel();
+    const hash = location.hash.slice(1) || 'home';
+
+    if (hash === 'home' || hash === '') {
+      showHome();
+    } else if (hash.startsWith('page-')) {
+      const pageId = hash.replace('page-', '');
+      showPage(pageId);
+    } else if (hash.startsWith('term-')) {
+      const termId = hash.replace('term-', '');
+      // Show term in panel, stay on current page or go home
+      if (!currentPageId) showHome();
+      openTermPanel(termId);
+    }
+  }
+
+  window.addEventListener('popstate', handleRoute);
+
+  // ===== Keyboard =====
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      if (termPanel.classList.contains('open')) {
+        closeTermPanel();
+      } else if (contentView.style.display === 'block') {
+        navigateTo('home');
+      }
+    }
+  });
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  // ===== PWA =====
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+
+  // ===== Init =====
+  loadData();
+})();
+</script>
+</body>
+</html>
