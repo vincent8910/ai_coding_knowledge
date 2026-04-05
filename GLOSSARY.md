@@ -41,6 +41,8 @@
 | **MCP** | 讓 AI 能連接外部工具的標準接口 | AI 的感官器官 | 「裝了 **MCP** 之後，Claude 就能直接幫你讀 Google 日曆了。」 | [→ 詳細](terms/mcp.md) |
 | **Agent** | 能自主規劃和執行任務的 AI | 自主做事的正職員工 | 「這個 **Agent** 會自己拆任務、自己跑，你只要看結果就好。」 | [→ 詳細](terms/agent.md) |
 | **SuperClaude** | 讓 Claude Code 更強的開源設定框架 | 員工培訓手冊 / 超級裝備包 | 「裝了 **SuperClaude** 之後，Claude Code 回答更有結構了。」 | [→ 詳細](terms/superclaude.md) |
+| **Skill** | 讓 AI 學會特定工作的可重用指令包 | 專業證照 | 「我寫了一個 **Skill**，以後打 `/週報` 就自動幫我整理了。」 | [→ 詳細](terms/skill.md) |
+| **Antigravity** | Google 出的 AI 開發桌面軟體 | AI 超級辦公桌 | 「我用 **Antigravity** 配 Skill 來自動做報表。」 | [→ 詳細](terms/antigravity.md) |
 
 ---
 
@@ -136,6 +138,8 @@ PM 寫規格、追進度時會遇到的詞：
 | Agent | 自主做事的正職員工 |
 | Agent 團隊 | 特遣隊 |
 | SuperClaude | 員工培訓手冊 |
+| Skill | 專業證照 |
+| Antigravity | AI 超級辦公桌 |
 | Prompt | 跟同事交辦工作的那句話 |
 | Markdown | 輕量版的 Word |
 | VS Code | 超強的筆記本 |
@@ -163,5 +167,6 @@ PM 寫規格、追進度時會遇到的詞：
 
 - 回首頁 👉 **[README →](README.md)**
 - 開始安裝 👉 **[安裝指南 →](INSTALL.md)**
+- 學 Skill 👉 **[Skill 完整教學 →](SKILLS.md)**
 - 查指令 👉 **[指令速查卡 →](CHEATSHEET.md)**
 - 找靈感 👉 **[使用場景 →](USE_CASES.md)**
