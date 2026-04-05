@@ -389,6 +389,63 @@
       color: var(--accent);
     }
 
+    /* ===== Branch Grid ===== */
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      .branch-grid { grid-template-columns: 1fr; }
+    }
+
+    .branch-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .branch-card:active { transform: scale(0.98); }
+
+    .branch-emoji {
+      font-size: 28px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .branch-info { flex: 1; }
+
+    .branch-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .branch-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
     /* ===== CONTENT VIEW ===== */
     #content-view {
       display: none;
@@ -930,17 +987,27 @@
   <div class="hero">
     <div class="hero-badge">🗺️ 學習路徑</div>
     <h1>讓 AI 從<span class="accent">顧問</span>變<span class="accent">員工</span></h1>
-    <p>非技術人員的 AI 工具入門指南。<br>7 站學習路徑，從零開始，照順序走就對了。</p>
+    <p>非技術人員的 AI 工具入門指南。<br>4 站主線 + 8 個進階主題，照你的需求學。</p>
   </div>
 
   <div class="skill-map">
-    <div class="skill-map-title">— 學習路徑 —</div>
+    <div class="skill-map-title">— 主線：從零到上手 —</div>
     <div class="station-list" id="station-list">
       <div class="loading">
         <div class="loading-spinner"></div>
         載入中...
       </div>
     </div>
+  </div>
+
+  <div class="skill-map" id="branch-map" style="display:none">
+    <div class="skill-map-title">— 進階主題：按需求挑選 —</div>
+    <div class="branch-grid" id="branch-grid"></div>
+  </div>
+
+  <div class="skill-map" id="tool-map" style="display:none">
+    <div class="skill-map-title">— 工具書 —</div>
+    <div class="branch-grid" id="tool-grid"></div>
   </div>
 
   <footer class="site-footer">
@@ -1089,55 +1156,99 @@
   }
 
   // ===== Station List (Home) =====
-  // 外部連結頁面（不在站內顯示，直接跳轉外部網站）
+  // 外部連結頁面
   const EXTERNAL_PAGES = {
     glossary: 'https://vincent8910.github.io/wtf-is/',
   };
 
   function buildStationList() {
-    stationList.innerHTML = PAGES.map((p, i) => {
-      const isExternal = EXTERNAL_PAGES[p.id];
-      const arrow = isExternal ? '↗' : '→';
-      const extraAttr = isExternal ? ` data-external="${EXTERNAL_PAGES[p.id]}"` : '';
-      return `
-      <div class="station-card animate-in" data-page="${p.id}"${extraAttr} tabindex="0" role="button" aria-label="第 ${i + 1} 站：${p.title}">
+    const mainPages = PAGES.filter(p => p.group === 'main');
+    const branchPages = PAGES.filter(p => p.group === 'branch');
+    const toolPages = PAGES.filter(p => p.group === 'tool');
+
+    // Main line (metro style)
+    stationList.innerHTML = mainPages.map((p, i) => `
+      <div class="station-card animate-in" data-page="${p.id}" tabindex="0" role="button" aria-label="第 ${i + 1} 站：${p.title}">
         <div class="station-dot">${p.emoji}</div>
         <div class="station-info">
           <div class="station-number">第 ${i + 1} 站</div>
-          <div class="station-name">${esc(p.title)}${isExternal ? ' <span style="font-size:12px;color:var(--text-tertiary)">(外部網站)</span>' : ''}</div>
+          <div class="station-name">${esc(p.title)}</div>
           <div class="station-desc">${esc(p.desc)}</div>
         </div>
-        <div class="station-arrow">${arrow}</div>
-      </div>`;
-    }).join('');
+        <div class="station-arrow">→</div>
+      </div>
+    `).join('');
 
+    // Branch grid (card style)
+    if (branchPages.length) {
+      const branchGrid = $('branch-grid');
+      branchGrid.innerHTML = branchPages.map(p => `
+        <div class="branch-card animate-in" data-page="${p.id}" tabindex="0" role="button">
+          <span class="branch-emoji">${p.emoji}</span>
+          <div class="branch-info">
+            <div class="branch-name">${esc(p.title)}</div>
+            <div class="branch-desc">${esc(p.desc)}</div>
+          </div>
+        </div>
+      `).join('');
+      $('branch-map').style.display = 'block';
+
+      branchGrid.addEventListener('click', e => {
+        const card = e.target.closest('.branch-card');
+        if (card) navigateTo('page-' + card.dataset.page);
+      });
+    }
+
+    // Tool pages
+    if (toolPages.length) {
+      const toolGrid = $('tool-grid');
+      toolGrid.innerHTML = toolPages.map(p => `
+        <div class="branch-card animate-in" data-page="${p.id}" tabindex="0" role="button">
+          <span class="branch-emoji">${p.emoji}</span>
+          <div class="branch-info">
+            <div class="branch-name">${esc(p.title)}</div>
+            <div class="branch-desc">${esc(p.desc)}</div>
+          </div>
+        </div>
+      `).join('');
+      $('tool-map').style.display = 'block';
+
+      toolGrid.addEventListener('click', e => {
+        const card = e.target.closest('.branch-card');
+        if (card) navigateTo('page-' + card.dataset.page);
+      });
+    }
+
+    // Main line click handlers
     stationList.addEventListener('click', e => {
       const card = e.target.closest('.station-card');
       if (!card) return;
-      if (card.dataset.external) {
-        window.open(card.dataset.external, '_blank', 'noopener');
-        return;
-      }
       navigateTo('page-' + card.dataset.page);
     });
 
     stationList.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         const card = e.target.closest('.station-card');
-        if (!card) return;
-        if (card.dataset.external) {
-          window.open(card.dataset.external, '_blank', 'noopener');
-          return;
-        }
-        navigateTo('page-' + card.dataset.page);
+        if (card) navigateTo('page-' + card.dataset.page);
       }
     });
   }
 
   // ===== Mini Map =====
   function buildMiniMap() {
-    miniMap.innerHTML = '<div class="mini-map-title">學習路徑</div>' +
-      PAGES.map((p, i) => `
+    const mainPages = PAGES.filter(p => p.group === 'main');
+    const branchPages = PAGES.filter(p => p.group === 'branch');
+
+    miniMap.innerHTML =
+      '<div class="mini-map-title">主線</div>' +
+      mainPages.map(p => `
+        <div class="mini-map-item" data-page="${p.id}">
+          <div class="mini-map-dot"></div>
+          <span>${p.emoji} ${esc(p.title)}</span>
+        </div>
+      `).join('') +
+      '<div class="mini-map-title" style="margin-top:16px">進階主題</div>' +
+      branchPages.map(p => `
         <div class="mini-map-item" data-page="${p.id}">
           <div class="mini-map-dot"></div>
           <span>${p.emoji} ${esc(p.title)}</span>
@@ -1147,8 +1258,6 @@
     miniMap.addEventListener('click', e => {
       const item = e.target.closest('.mini-map-item');
       if (!item) return;
-      const ext = EXTERNAL_PAGES[item.dataset.page];
-      if (ext) { window.open(ext, '_blank', 'noopener'); return; }
       navigateTo('page-' + item.dataset.page);
     });
   }
@@ -1161,29 +1270,40 @@
 
   // ===== Show Page Content =====
   function showPage(pageId) {
-    const idx = PAGES.findIndex(p => p.id === pageId);
-    if (idx === -1) return showHome();
+    const page = PAGES.find(p => p.id === pageId);
+    if (!page) return showHome();
 
-    const page = PAGES[idx];
     currentPageId = pageId;
 
     document.title = `${page.title} — AI Coding 入門指南`;
     contentTitle.textContent = page.title;
     contentEmoji.textContent = page.emoji;
 
-    // Progress
-    const pct = ((idx + 1) / PAGES.length * 100).toFixed(0);
-    progressFill.style.width = pct + '%';
-    progressText.textContent = `${idx + 1} / ${PAGES.length}`;
+    // Progress (only for main pages)
+    const mainPages = PAGES.filter(p => p.group === 'main');
+    const mainIdx = mainPages.findIndex(p => p.id === pageId);
+    if (mainIdx >= 0) {
+      const pct = ((mainIdx + 1) / mainPages.length * 100).toFixed(0);
+      progressFill.style.width = pct + '%';
+      progressText.textContent = `主線 ${mainIdx + 1} / ${mainPages.length}`;
+      $('content-progress').style.display = 'flex';
+    } else {
+      $('content-progress').style.display = 'none';
+    }
 
     // Content
     mdContent.innerHTML = page.content;
     bindContentLinks(mdContent);
 
-    // Navigation
-    const prevPage = idx > 0 ? PAGES[idx - 1] : null;
-    const nextPage = idx < PAGES.length - 1 ? PAGES[idx + 1] : null;
-    const navHTML = buildNavHTML(prevPage, nextPage);
+    // Navigation - main pages get prev/next, branch pages get back only
+    let navHTML;
+    if (mainIdx >= 0) {
+      const prevPage = mainIdx > 0 ? mainPages[mainIdx - 1] : null;
+      const nextPage = mainIdx < mainPages.length - 1 ? mainPages[mainIdx + 1] : null;
+      navHTML = buildNavHTML(prevPage, nextPage);
+    } else {
+      navHTML = `<button class="nav-btn" onclick="navigateTo('home')">← 回到學習路徑</button><span></span>`;
+    }
     topNav.innerHTML = navHTML;
     bottomNav.innerHTML = navHTML;
     bindNavButtons(topNav);
@@ -1270,10 +1390,10 @@
   siteTitle.addEventListener('click', () => navigateTo('home'));
 
   // ===== Routing =====
-  function navigateTo(hash) {
+  window.navigateTo = function navigateTo(hash) {
     history.pushState(null, '', '#' + hash);
     handleRoute();
-  }
+  };
 
   function handleRoute() {
     closeTermPanel();

@@ -17,16 +17,33 @@ const DOCS = path.join(ROOT, 'docs');
 const OUT_PAGES = path.join(DOCS, 'pages.json');
 const OUT_TERMS = path.join(DOCS, 'terms.json');
 
-// 主要頁面定義（學習路徑順序）
-const PAGES = [
+// 主線頁面（必修，照順序走）
+const MAIN_PAGES = [
   { id: 'readme', file: 'README.md', title: '總覽', emoji: '🚉', desc: '了解全貌，搞懂為什麼值得學' },
   { id: 'comparison', file: 'COMPARISON.md', title: '選你的 AI', emoji: '🔍', desc: '五大 AI 服務比較' },
   { id: 'install', file: 'INSTALL.md', title: '裝起來', emoji: '🔧', desc: '零基礎安裝手冊' },
-  { id: 'cheatsheet', file: 'CHEATSHEET.md', title: '小抄', emoji: '📋', desc: '指令速查卡' },
-  { id: 'use-cases', file: 'USE_CASES.md', title: '開始做事', emoji: '🎯', desc: '12 個實戰場景' },
-  { id: 'skills', file: 'SKILLS.md', title: 'Skill 教學', emoji: '🎓', desc: '建立你的 AI 專業證照' },
-  { id: 'glossary', file: 'GLOSSARY.md', title: '術語速查', emoji: '📖', desc: '不懂的詞來這裡查' },
+  { id: 'use-cases', file: 'USE_CASES.md', title: '開始做事', emoji: '🎯', desc: '14 個實戰場景' },
 ];
+
+// 進階分支頁面（選修，按需求挑）
+const BRANCH_PAGES = [
+  { id: 'skills', file: 'SKILLS.md', title: 'Skill 教學', emoji: '🎓', desc: '建立你的 AI 專業證照' },
+  { id: 'plugins', file: 'PLUGINS.md', title: 'Plugin 教學', emoji: '🔌', desc: '一鍵安裝 AI 擴充功能' },
+  { id: 'hooks', file: 'HOOKS.md', title: 'Hooks 教學', emoji: '⚡', desc: '讓 AI 自動做該做的事' },
+  { id: 'mcp-guide', file: 'MCP-GUIDE.md', title: 'MCP 教學', emoji: '🔗', desc: '幫 AI 裝上感官器官' },
+  { id: 'subagents', file: 'SUBAGENTS.md', title: 'Subagent 教學', emoji: '👥', desc: 'AI 的分身術' },
+  { id: 'computer-use', file: 'COMPUTER-USE.md', title: 'Computer Use', emoji: '🖥️', desc: 'AI 直接操控你的電腦' },
+  { id: 'project-instructions', file: 'PROJECT-INSTRUCTIONS.md', title: '專案指令檔', emoji: '📝', desc: '讓 AI 記住專案規則' },
+  { id: 'agent-teams', file: 'AGENT-TEAMS.md', title: 'Agent Teams', emoji: '🎖️', desc: '組建 AI 特遣隊' },
+];
+
+// 工具書（不在主線也不在分支，但可從側邊存取）
+const TOOL_PAGES = [
+  { id: 'cheatsheet', file: 'CHEATSHEET.md', title: '指令速查卡', emoji: '📋', desc: '小抄帶著走' },
+];
+
+// 合併所有頁面（供建構使用）
+const PAGES = [...MAIN_PAGES, ...BRANCH_PAGES, ...TOOL_PAGES];
 
 // 頁面檔名 → 頁面 ID 對應表
 const FILE_TO_PAGE = {};
@@ -305,11 +322,16 @@ function buildPages() {
     let html = markdownToHtml(raw);
     html = processLinks(html);
 
+    const group = MAIN_PAGES.find(p => p.id === page.id) ? 'main'
+      : BRANCH_PAGES.find(p => p.id === page.id) ? 'branch'
+      : 'tool';
+
     pages.push({
       id: page.id,
       title: page.title,
       emoji: page.emoji,
       desc: page.desc,
+      group,
       content: html,
     });
   }
