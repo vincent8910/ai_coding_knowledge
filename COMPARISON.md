@@ -2,7 +2,7 @@
 
 > **該訂哪一家？IDE 跟 CLI 差在哪？這篇幫你整理清楚。**
 >
-> 最後更新：2026 年 2 月（AI 產品變動快速，請以各家官網為準）
+> 最後更新：2026 年 4 月（AI 產品變動快速，請以各家官網為準）
 
 ---
 
@@ -66,13 +66,13 @@
 
 ### 總覽表
 
-> 💡 以下價格為 2026 年 2 月查到的資訊，以美金計價。AI 產品價格變動頻繁，請以各家官網為準。
+> 💡 以下價格為 2026 年 4 月查到的資訊，以美金計價。AI 產品價格變動頻繁，請以各家官網為準。
 
 | 廠商 | 免費方案 | 基本付費 | 進階方案 | 旗艦方案 | 官網 |
 |------|---------|---------|---------|---------|------|
-| **OpenAI** | ChatGPT Free | Plus $20/月 | Pro $200/月 | Enterprise（洽詢） | [chatgpt.com/pricing](https://chatgpt.com/pricing/) |
+| **OpenAI** | ChatGPT Free | Go $8/月 · Plus $20/月 | Pro $200/月 | Enterprise（洽詢） | [chatgpt.com/pricing](https://chatgpt.com/pricing/) |
 | **Anthropic** | Claude Free | Pro $20/月 | Max 5x $100/月 | Max 20x $200/月 | [claude.com/pricing](https://claude.com/pricing) |
-| **Google** | Gemini Free | AI Pro $19.99/月 | AI Ultra $249.99/月 | Enterprise（洽詢） | [gemini.google/subscriptions](https://gemini.google/subscriptions/) |
+| **Google** | Gemini Free | AI Pro $19.99/月 | AI Ultra ~$42/月 | Enterprise（洽詢） | [gemini.google/subscriptions](https://gemini.google/subscriptions/) |
 | **xAI** | Grok Free | SuperGrok $30/月 | SuperGrok Heavy $300/月 | — | [grok.com/plans](https://grok.com/plans) |
 | **Cursor** | Cursor Free | Pro $20/月 | Pro+ $60/月 | Ultra $200/月 | [cursor.com/pricing](https://www.cursor.com/pricing) |
 
@@ -84,13 +84,15 @@
 
 | 方案 | 月費 | 你能用什麼 |
 |------|------|-----------|
-| **Free** | $0 | ChatGPT 網頁聊天（有次數限制）、基本模型 |
-| **Plus** | $20 | GPT 進階模型、更高用量、含 Codex CLI 使用權 |
-| **Pro** | $200 | 無限使用頂級模型、最高優先級 |
+| **Free** | $0 | ChatGPT 網頁聊天（有次數限制）、基本模型、含有限 [Codex](terms/codex.md) 使用 |
+| **Go** | $8 | 入門付費方案、GPT-5.3 存取（含廣告） |
+| **Plus** | $20 | GPT-5.3 全功能、Deep Research、Codex CLI + Codex App |
+| **Pro** | $200 | 無限使用頂級模型、延伸推理、最高優先級 |
 | **Team** | $25-30/人 | 團隊協作空間、管理功能 |
 
 **IDE 工具：** 無自有 IDE（透過 VS Code + GitHub Copilot 整合）
 **CLI 工具：** [Codex CLI](https://github.com/openai/codex)（開源，`npm i -g @openai/codex`）— Plus 以上方案即可使用
+**桌面 App：** [Codex App](terms/codex.md)（macOS + Windows）— 可同時管理多個 Agent 平行運作
 
 ---
 
@@ -99,13 +101,14 @@
 | 方案 | 月費 | 你能用什麼 |
 |------|------|-----------|
 | **Free** | $0 | Claude 網頁聊天（有次數限制） |
-| **Pro** | $20 | 更高用量、Claude Code CLI 使用權 |
-| **Max 5x** | $100 | Pro 的 5 倍用量、優先存取 |
+| **Pro** | $20 | 更高用量、Claude Code CLI、[Computer Use（電腦操控）](terms/computer-use.md) |
+| **Max 5x** | $100 | Pro 的 5 倍用量、優先存取、持久記憶 |
 | **Max 20x** | $200 | Pro 的 20 倍用量、最高優先級 |
-| **Team** | $25-30/人 | 團隊協作、管理後台 |
+| **Team** | $25-30/人 | 團隊協作、管理後台（$150/人含 Claude Code） |
 
 **IDE 工具：** 無自有 IDE（可搭配 Cursor / VS Code 使用 Claude 模型）
 **CLI 工具：** [Claude Code](https://docs.anthropic.com/en/docs/claude-code)（`npm i -g @anthropic-ai/claude-code`）— Pro 以上方案或 API 額度即可使用
+**最新亮點：** [Computer Use](terms/computer-use.md)（AI 直接操控你的電腦）、[排程任務](terms/hooks.md)（AI 在背景自動工作）、[Subagent](terms/subagent.md)（多分身平行處理）
 
 > 💡 **這份指南的主角就是 Claude Code！** 訂閱 Pro 方案後，你就能直接在 Terminal 使用，不需要額外購買 API 額度。
 
@@ -117,7 +120,7 @@
 |------|------|-----------|
 | **Free** | $0 | Gemini 網頁聊天、Gemini CLI 基本用量 |
 | **AI Pro** | $19.99 | Gemini 進階模型、Antigravity IDE、Gemini CLI 進階、2TB 雲端 |
-| **AI Ultra** | $249.99 | 最高等級模型存取、最高優先級 |
+| **AI Ultra** | ~$42/月（$124.99/季） | 最高等級模型、25,000 AI credits |
 | **Enterprise** | 洽詢 | 企業管理、合規、自訂部署 |
 
 **IDE 工具：** [Google Antigravity](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/)（基於 VS Code 改造的 AI-First IDE，AI Pro 以上方案適用）

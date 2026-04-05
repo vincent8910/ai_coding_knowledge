@@ -42,7 +42,13 @@
 | **Agent** | 能自主規劃和執行任務的 AI | 自主做事的正職員工 | 「這個 **Agent** 會自己拆任務、自己跑，你只要看結果就好。」 | [→ 詳細](terms/agent.md) |
 | **SuperClaude** | 讓 Claude Code 更強的開源設定框架 | 員工培訓手冊 / 超級裝備包 | 「裝了 **SuperClaude** 之後，Claude Code 回答更有結構了。」 | [→ 詳細](terms/superclaude.md) |
 | **Skill** | 讓 AI 學會特定工作的可重用指令包 | 專業證照 | 「我寫了一個 **Skill**，以後打 `/週報` 就自動幫我整理了。」 | [→ 詳細](terms/skill.md) |
+| **Plugin** | Skill 的進化版，一整包打包好的擴充功能 | 手機的 App | 「裝了這個 **Plugin** 之後，Claude Code 就會自動跑測試了。」 | [→ 詳細](terms/plugin.md) |
+| **Hooks** | 讓 AI 在特定時機自動執行預設動作 | 門口的感應燈 | 「我設了一個 **Hook**，每次 AI 改完檔案就自動格式化。」 | [→ 詳細](terms/hooks.md) |
+| **Subagent** | AI 派出的分身，可平行處理多個任務 | 分身術 | 「Claude 派了 3 個 **Subagent** 同時做不同的事。」 | [→ 詳細](terms/subagent.md) |
+| **Computer Use** | AI 直接操控你的電腦螢幕 | 遙控員工 | 「開了 **Computer Use**，Claude 就直接幫我操作瀏覽器填表了。」 | [→ 詳細](terms/computer-use.md) |
+| **專案指令檔** | 讓 AI 自動記住專案規則的設定檔 | 新人入職手冊 | 「在專案裡放一個 **CLAUDE.md**，AI 就知道我們的規矩了。」 | [→ 詳細](terms/project-instructions.md) |
 | **Antigravity** | Google 出的 AI 開發桌面軟體 | AI 超級辦公桌 | 「我用 **Antigravity** 配 Skill 來自動做報表。」 | [→ 詳細](terms/antigravity.md) |
+| **Codex** | OpenAI 的 AI 程式助手平台 | ChatGPT 實習生升正職 | 「用 **Codex** 就能讓 AI 直接幫你改程式了。」 | [→ 詳細](terms/codex.md) |
 
 ---
 
@@ -139,7 +145,13 @@ PM 寫規格、追進度時會遇到的詞：
 | Agent 團隊 | 特遣隊 |
 | SuperClaude | 員工培訓手冊 |
 | Skill | 專業證照 |
+| Plugin | 手機的 App |
+| Hooks | 門口的感應燈 |
+| Subagent | 分身術 |
+| Computer Use | 遙控員工 |
+| 專案指令檔 | 新人入職手冊 |
 | Antigravity | AI 超級辦公桌 |
+| Codex | ChatGPT 實習生升正職 |
 | Prompt | 跟同事交辦工作的那句話 |
 | Markdown | 輕量版的 Word |
 | VS Code | 超強的筆記本 |

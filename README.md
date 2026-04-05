@@ -152,9 +152,11 @@ Level 3 ─ Agent 團隊（特遣隊）
 | **Prompt** | 跟同事交辦工作的那句話 | [→ 詳細](terms/prompt.md) |
 | **MCP** | AI 的感官器官 | [→ 詳細](terms/mcp.md) |
 | **Skill** | 專業證照 | [→ 詳細](terms/skill.md) |
-| **Antigravity** | AI 超級辦公桌 | [→ 詳細](terms/antigravity.md) |
+| **Computer Use** | 遙控員工 | [→ 詳細](terms/computer-use.md) |
+| **Hooks** | 門口的感應燈 | [→ 詳細](terms/hooks.md) |
+| **Plugin** | 手機的 App | [→ 詳細](terms/plugin.md) |
 
-> 👉 以上只列最常見的 8 個，全部 18 個術語（含比喻對照總表）請看 **[完整速查手冊](GLOSSARY.md)**
+> 👉 以上只列最常見的 10 個，全部術語（含比喻對照總表）請看 **[完整速查手冊](GLOSSARY.md)**
 
 ---
 
