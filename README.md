@@ -8,14 +8,12 @@
 
 - [這個專案在幹嘛？](#這個專案在幹嘛) — 顧問 vs 員工，一張表看懂差異
 - [為什麼非工程師也該學這個？](#為什麼非工程師也該學這個) — ROI 分析、駕駛員理論、Git/GitHub 的重要性
-- [快速導覽：從零到上手](#快速導覽從零到上手) — 七站路線圖，照順序走
-  - [COMPARISON.md](COMPARISON.md) — 五大 AI 服務比較 & IDE vs CLI
-  - [INSTALL.md](INSTALL.md) — 零基礎安裝手冊
-  - [CHEATSHEET.md](CHEATSHEET.md) — 指令速查卡
-  - [USE_CASES.md](USE_CASES.md) — 12 個實戰場景
+- [快速導覽：從零到上手](#快速導覽從零到上手) — 主線 4 站 + 進階 8 主題
+  - 主線：[COMPARISON](COMPARISON.md) → [INSTALL](INSTALL.md) → [USE_CASES](USE_CASES.md)
+  - 進階：[Skill](SKILLS.md) · [Plugin](PLUGINS.md) · [Hooks](HOOKS.md) · [MCP](MCP-GUIDE.md) · [Subagent](SUBAGENTS.md) · [Computer Use](COMPUTER-USE.md) · [專案指令檔](PROJECT-INSTRUCTIONS.md) · [Agent Teams](AGENT-TEAMS.md)
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
-- [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 18 個術語的白話解釋 → [完整版](GLOSSARY.md)
+- [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 常用術語速查 → [完整版](GLOSSARY.md)
 
 ---
 
@@ -76,28 +74,36 @@
 
 ## 快速導覽：從零到上手
 
-這份指南分成七站，建議照順序走：
+### 主線：照順序走（4 站搞定基礎）
 
-### 🚉 第一站：你在這裡
-**[README.md](README.md)**（本文件）——了解全貌、搞懂為什麼值得學
+| 站 | 頁面 | 內容 |
+|---|---|---|
+| 🚉 **第一站** | **[README.md](README.md)**（你在這裡） | 了解全貌、搞懂為什麼值得學 |
+| 🔍 **第二站** | **[COMPARISON.md](COMPARISON.md)** | 五大 AI 服務比較、訂閱方案怎麼選 |
+| 🔧 **第三站** | **[INSTALL.md](INSTALL.md)** | 零基礎安裝手冊（Antigravity 或 Claude Code） |
+| 🎯 **第四站** | **[USE_CASES.md](USE_CASES.md)** | 14 個實戰場景，找到你的第一個任務 |
 
-### 🔍 第二站：選你的 AI
-**[COMPARISON.md](COMPARISON.md)**——五大 AI 服務比較、IDE vs CLI 優缺點、訂閱方案怎麼選
+### 進階主題：按需求挑選
 
-### 🔧 第三站：裝起來
-**[INSTALL.md](INSTALL.md)**——零基礎安裝手冊，像旅遊行李清單一樣一步步帶你裝好
+走完主線後，根據你的需求挑有興趣的深入學習：
 
-### 📋 第四站：小抄帶著走
-**[CHEATSHEET.md](CHEATSHEET.md)**——指令速查卡，裝好後的第一張小抄，隨查隨用
+| 主題 | 頁面 | 一句話說明 |
+|---|---|---|
+| 🎓 **Skill** | [SKILLS.md](SKILLS.md) | 讓 AI 學會專業技能，一鍵重播 |
+| 🔌 **Plugin** | [PLUGINS.md](PLUGINS.md) | 一鍵安裝 AI 擴充功能包 |
+| ⚡ **Hooks** | [HOOKS.md](HOOKS.md) | 讓 AI 在特定時機自動執行動作 |
+| 🔗 **MCP** | [MCP-GUIDE.md](MCP-GUIDE.md) | 幫 AI 裝上感官器官，連接外部工具 |
+| 👥 **Subagent** | [SUBAGENTS.md](SUBAGENTS.md) | AI 的分身術，同時處理多件事 |
+| 🖥️ **Computer Use** | [COMPUTER-USE.md](COMPUTER-USE.md) | AI 直接幫你操作電腦螢幕 |
+| 📝 **專案指令檔** | [PROJECT-INSTRUCTIONS.md](PROJECT-INSTRUCTIONS.md) | 讓 AI 自動記住你的專案規則 |
+| 🎖️ **Agent Teams** | [AGENT-TEAMS.md](AGENT-TEAMS.md) | 組建多 AI 特遣隊協作 |
 
-### 🎯 第五站：開始做事
-**[USE_CASES.md](USE_CASES.md)**——實戰靈感庫，看看別人怎麼用、找到你的第一個任務
+### 工具書：隨時查閱
 
-### 🎯 第六站：學會 Skill
-**[SKILLS.md](SKILLS.md)**——Skill 完整教學，從安裝 Antigravity 到建立 15 個實戰 Skill
-
-### 📖 第七站：不懂就查
-**[GLOSSARY.md](GLOSSARY.md)**——專有名詞速查手冊，18 個術語的白話解釋 + 比喻對照總表
+| 頁面 | 用途 |
+|---|---|
+| 📋 **[CHEATSHEET.md](CHEATSHEET.md)** | 指令速查卡，印出來貼螢幕旁 |
+| 📖 **[GLOSSARY.md](GLOSSARY.md)** | 術語速查手冊，不懂的詞來這裡查 |
 
 ---
 
