@@ -515,7 +515,7 @@ AI 是透過「看截圖」來理解螢幕的，所以：
 | 想了解 AI 的其他能力 | 看 [Agent](terms/agent.md) 了解 AI 代理人的概念 |
 | 想學用文字指令操作 AI | 看 [Claude Code](terms/terminal-cli.md) 教學 |
 | 想用 AI 做更多專業任務 | 看 [Skill](terms/skill.md) 了解專業技能模組 |
-| 想看 12 個實戰場景 | 看 [USE_CASES.md](USE_CASES.md) 找靈感 |
+| 想看 14 個實戰場景 | 看 [USE_CASES.md](USE_CASES.md) 找靈感 |
 | 想從零開始安裝 AI 工具 | 看 [INSTALL.md](INSTALL.md) 安裝指南 |
 | 想快速查指令 | 看 [CHEATSHEET.md](CHEATSHEET.md) 速查卡 |
 

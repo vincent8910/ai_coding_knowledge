@@ -37,7 +37,7 @@ README.md          — 專案門面，5 站導覽 + 術語速查表
 COMPARISON.md      — AI 服務訂閱比較 & IDE vs CLI 分析
 INSTALL.md         — 零基礎安裝手冊（macOS + Windows + Git Bash）
 CHEATSHEET.md      — 指令速查卡（基礎操作 / SuperClaude / MCP / 旗標）
-USE_CASES.md       — 12 個使用場景（初級→中級→進階），按角色推薦
+USE_CASES.md       — 14 個使用場景（初級→中級→進階），按角色推薦
 terms/             — 專有名詞獨立說明頁（每頁：白話解釋 + 比喻 + 官方連結）
 ```
 

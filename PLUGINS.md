@@ -585,7 +585,7 @@ claude plugin enable email-writer
 | 想先學基礎的 Skill | **[Skill 教學 →](SKILLS.md)** |
 | 想了解 MCP 是什麼 | **[MCP 說明](terms/mcp.md)** |
 | 想了解 Hooks 怎麼用 | **[Hooks 說明](terms/hooks.md)** |
-| 想看更多使用場景 | **[12 個實戰場景](USE_CASES.md)** |
+| 想看更多使用場景 | **[14 個實戰場景](USE_CASES.md)** |
 | 想回首頁看全貌 | **[回到首頁](README.md)** |
 | 想查其他術語 | **[專有名詞速查](GLOSSARY.md)** |
 
