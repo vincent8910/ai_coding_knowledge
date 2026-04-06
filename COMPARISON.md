@@ -119,7 +119,7 @@
 | 方案 | 月費 | 你能用什麼 |
 |------|------|-----------|
 | **Free** | $0 | Gemini 網頁聊天、Gemini CLI 基本用量 |
-| **AI Pro** | $19.99 | Gemini 進階模型、Antigravity IDE、Gemini CLI 進階、2TB 雲端 |
+| **AI Pro** | $19.99 | Gemini 進階模型、Antigravity IDE、Gemini CLI 進階、5TB 雲端 |
 | **AI Ultra** | ~$42/月（$124.99/季） | 最高等級模型、25,000 AI credits |
 | **Enterprise** | 洽詢 | 企業管理、合規、自訂部署 |
 
