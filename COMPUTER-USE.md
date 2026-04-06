@@ -450,7 +450,7 @@ Computer Use 很厲害，但不是萬能的。了解它的限制，才能用得�
 | Claude.ai 網頁版 | ✅ 已支援 | 需要 Pro 或 Max 方案 |
 | Claude 桌面版（macOS） | ✅ 已支援 | 體驗最好 |
 | Claude 桌面版（Windows） | ✅ 已支援 | 同樣體驗流暢 |
-| [Claude Code](terms/terminal-cli.md)（命令列） | ❌ 不適用 | Claude Code 是用文字指令操作，不需要螢幕控制 |
+| [Claude Code](terms/terminal-cli.md)（命令列） | ✅ 已支援 | 2026/3/31 新增，目前限 macOS，需 v2.1.85+，需互動式 session |
 | 手機版 | ❌ 尚未支援 | 未來可能會有 |
 
 ### 速度限制：它比你慢
