@@ -33,15 +33,24 @@ A documentation-only repository (pure Markdown, no code) teaching **non-technica
 ## Document Architecture
 
 ```
-README.md          — 專案門面，5 站導覽 + 術語速查表
+README.md          — 專案門面，快速導覽（主線 + 進階 + 工具書）+ 常見術語速查（僅列最常見 10 詞）
 COMPARISON.md      — AI 服務訂閱比較 & IDE vs CLI 分析
 INSTALL.md         — 零基礎安裝手冊（macOS + Windows + Git Bash）
 CHEATSHEET.md      — 指令速查卡（基礎操作 / SuperClaude / MCP / 旗標）
 USE_CASES.md       — 14 個使用場景（初級→中級→進階），按角色推薦
-terms/             — 專有名詞獨立說明頁（每頁：白話解釋 + 比喻 + 官方連結）
+GLOSSARY.md        — 完整術語速查手冊（8 大分類 + 比喻對照總表）
+terms/             — 42 個專有名詞獨立說明頁（每頁：白話解釋 + 比喻 + 官方連結）
 ```
 
-**Navigation flow**: README → COMPARISON → INSTALL → CHEATSHEET → USE_CASES. All pages cross-link. README has a glossary section linking to all `terms/*.md` pages.
+**Navigation flow**（README 快速導覽三區塊）:
+- 主線 4 站：README → COMPARISON → INSTALL → USE_CASES
+- 進階 8 主題：SKILLS / PLUGINS / HOOKS / MCP-GUIDE / SUBAGENTS / COMPUTER-USE / PROJECT-INSTRUCTIONS / AGENT-TEAMS
+- 工具書：CHEATSHEET、GLOSSARY。All pages cross-link.
+
+**術語三層架構**:
+- `README.md` 底部：精選 10 個最常見術語（入口），連結到 GLOSSARY.md
+- `GLOSSARY.md`：全部 42 個術語的分類表格（索引），連結到各 terms/*.md
+- `terms/*.md`：每個術語的完整說明頁（內容）
 
 ## Commit Conventions
 
