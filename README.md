@@ -10,7 +10,7 @@
 - [為什麼非工程師也該學這個？](#為什麼非工程師也該學這個) — ROI 分析、駕駛員理論、Git/GitHub 的重要性
 - [快速導覽：從零到上手](#快速導覽從零到上手) — 主線 4 站 + 進階 8 主題
   - 主線：[COMPARISON](COMPARISON.md) → [INSTALL](INSTALL.md) → [USE_CASES](USE_CASES.md)
-  - 進階：[Skill](SKILLS.md) · [Plugin](PLUGINS.md) · [Hooks](HOOKS.md) · [MCP](MCP-GUIDE.md) · [Subagent](SUBAGENTS.md) · [Computer Use](COMPUTER-USE.md) · [專案指令檔](PROJECT-INSTRUCTIONS.md) · [Agent Teams](AGENT-TEAMS.md) · [AI 安全與治理](terms/ai-sandbox.md) · [多代理系統](terms/multi-agent-system.md)
+  - 進階：[Skill](SKILLS.md) · [Plugin](PLUGINS.md) · [Hooks](HOOKS.md) · [MCP](MCP-GUIDE.md) · [Subagent](SUBAGENTS.md) · [Computer Use](COMPUTER-USE.md) · [專案指令檔](PROJECT-INSTRUCTIONS.md) · [Agent Teams](AGENT-TEAMS.md)
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
 - [變更驗收 SOP](VALIDATION-SOP.md) — diff、測試、人工確認與 rollback
@@ -173,9 +173,6 @@ Level 3 ─ Agent 團隊（特遣隊）
 | **Computer Use** | 遙控員工 | [→ 詳細](terms/computer-use.md) |
 | **Hooks** | 門口的感應燈 | [→ 詳細](terms/hooks.md) |
 | **Plugin** | 手機的 App | [→ 詳細](terms/plugin.md) |
-| **AI Sandbox** | 沒有總鑰匙的工作室 | [→ 詳細](terms/ai-sandbox.md) |
-| **Prompt Injection** | 藏在資料裡的假指令 | [→ 詳細](terms/prompt-injection.md) |
-| **Multi-Agent System** | 分工明確的 AI 團隊 | [→ 詳細](terms/multi-agent-system.md) |
 
 > 👉 以上只列最常見的 10 個，全部術語（含比喻對照總表）請看 **[完整速查手冊](GLOSSARY.md)**
 
