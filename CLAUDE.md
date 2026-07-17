@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A documentation-only repository (pure Markdown, no code) teaching **non-technical users** (PMs, marketers, admins) how to use Claude Code and AI coding agents. All content is in **繁體中文（台灣）**.
+A documentation-only repository (pure Markdown, no code) teaching users how to choose and safely use **multiple AI Coding tools** (CLI, IDE, Coding Agent and multi-agent workflows). All content is in **繁體中文（台灣）**.
 
 ## Writing Guidelines
 
@@ -38,6 +38,7 @@ COMPARISON.md      — AI 服務訂閱比較 & IDE vs CLI 分析
 INSTALL.md         — 零基礎安裝手冊（macOS + Windows + Git Bash）
 CHEATSHEET.md      — 指令速查卡（基礎操作 / SuperClaude / MCP / 旗標）
 USE_CASES.md       — 14 個使用場景（初級→中級→進階），按角色推薦
+VALIDATION-SOP.md  — AI Coding 變更驗收 SOP（diff / 測試 / 人工確認 / rollback）
 GLOSSARY.md        — 完整術語速查手冊（8 大分類 + 比喻對照總表）
 terms/             — 42 個專有名詞獨立說明頁（每頁：白話解釋 + 比喻 + 官方連結）
 ```
