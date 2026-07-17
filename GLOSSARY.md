@@ -40,6 +40,8 @@
 | **Markdown** | 用簡單符號排版的文字格式（.md 檔） | 輕量版的 Word | 「這份文件是 **Markdown** 格式，用 `#` 就能加標題。」 | [→ 詳細](terms/markdown.md) |
 | **MCP** | 讓 AI 能連接外部工具的標準接口 | AI 的感官器官 | 「裝了 **MCP** 之後，Claude 就能直接幫你讀 Google 日曆了。」 | [→ 詳細](terms/mcp.md) |
 | **Agent** | 能自主規劃和執行任務的 AI | 自主做事的正職員工 | 「這個 **Agent** 會自己拆任務、自己跑，你只要看結果就好。」 | [→ 詳細](terms/agent.md) |
+| **Multi-Agent System** | 多個有角色與協作規則的 Agent 系統 | 分工明確的 AI 團隊 | 「這不是多個聊天視窗，而是 **Multi-Agent System**。」 | [→ 詳細](terms/multi-agent-system.md) |
+| **A2A** | Agent 與 Agent 之間的協作與通訊概念 | AI 團隊之間的對講機 | 「MCP 連工具，**A2A** 連另一個 Agent。」 | [→ 詳細](terms/a2a.md) |
 | **SuperClaude** | 讓 Claude Code 更強的開源設定框架 | 員工培訓手冊 / 超級裝備包 | 「裝了 **SuperClaude** 之後，Claude Code 回答更有結構了。」 | [→ 詳細](terms/superclaude.md) |
 | **Skill** | 讓 AI 學會特定工作的可重用指令包 | 專業證照 | 「我寫了一個 **Skill**，以後打 `/週報` 就自動幫我整理了。」 | [→ 詳細](terms/skill.md) |
 | **Plugin** | Skill 的進化版，一整包打包好的擴充功能 | 手機的 App | 「裝了這個 **Plugin** 之後，Claude Code 就會自動跑測試了。」 | [→ 詳細](terms/plugin.md) |
@@ -49,6 +51,29 @@
 | **專案指令檔** | 讓 AI 自動記住專案規則的設定檔 | 新人入職手冊 | 「在專案裡放一個 **CLAUDE.md**，AI 就知道我們的規矩了。」 | [→ 詳細](terms/project-instructions.md) |
 | **Antigravity** | Google 出的 AI 開發桌面軟體 | AI 超級辦公桌 | 「我用 **Antigravity** 配 Skill 來自動做報表。」 | [→ 詳細](terms/antigravity.md) |
 | **Codex** | OpenAI 的 AI 程式助手平台 | ChatGPT 實習生升正職 | 「用 **Codex** 就能讓 AI 直接幫你改程式了。」 | [→ 詳細](terms/codex.md) |
+
+---
+
+## AI Agent 安全與治理
+
+AI 開始讀檔、執行指令與呼叫外部工具後，這些詞用來理解資料邊界與風險：
+
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **AI Sandbox** | 限制 AI 檔案、指令與網路活動範圍的隔離環境 | 沒有總鑰匙的工作室 | 「先在 **Sandbox** 裡測試，不要直接碰 production。」 | [→ 詳細](terms/ai-sandbox.md) |
+| **Context Boundary** | 定義 AI 可以看見哪些資料的邊界 | 本次會議的資料夾 | 「先設定 **Context Boundary**，不要把 `.env` 放進上下文。」 | [→ 詳細](terms/context-boundary.md) |
+| **Prompt Injection** | 藏在外部資料裡、誘導 AI 越權的假指令 | 混進文件的冒牌公文 | 「這份 README 可能有 **Prompt Injection**，不能照做。」 | [→ 詳細](terms/prompt-injection.md) |
+
+---
+
+## 多代理協作
+
+當單一 Agent 需要拆工、委派或和其他 Agent 協作時會遇到：
+
+| 詞彙 | 一句話解釋 | 比喻 | 你會在哪聽到 | 詳細說明 |
+|------|-----------|------|-------------|---------|
+| **Multi-Agent System** | 多個有角色與協作規則的 Agent 系統 | 分工明確的 AI 團隊 | 「這不是多個聊天視窗，而是 **Multi-Agent System**。」 | [→ 詳細](terms/multi-agent-system.md) |
+| **A2A** | Agent 與 Agent 之間的協作與通訊概念 | AI 團隊的對講機 | 「MCP 連工具，**A2A** 連另一個 Agent。」 | [→ 詳細](terms/a2a.md) |
 
 ---
 
@@ -143,6 +168,11 @@ PM 寫規格、追進度時會遇到的詞：
 | MCP | AI 的感官器官 |
 | Agent | 自主做事的正職員工 |
 | Agent 團隊 | 特遣隊 |
+| Multi-Agent System | 分工明確的 AI 團隊 |
+| A2A | AI 團隊之間的對講機 |
+| AI Sandbox | 沒有總鑰匙的工作室 |
+| Context Boundary | 本次會議的資料夾 |
+| Prompt Injection | 混進文件的冒牌公文 |
 | SuperClaude | 員工培訓手冊 |
 | Skill | 專業證照 |
 | Plugin | 手機的 App |
