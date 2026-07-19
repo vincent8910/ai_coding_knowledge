@@ -2,7 +2,11 @@
 
 > **該訂哪一家？IDE 跟 CLI 差在哪？這篇幫你整理清楚。**
 >
-- **整理版本：2026 年 7 月**（價格、方案與產品能力變動快速；請以各家官方頁面為準）
+- **整理版本：2026 年 7 月**
+- **價格／方案查證原則**：以下為文件整理時的參考快照；購買或部署前，請直接核對各家官方方案頁。產品價格、額度、容量與模型能力可能隨地區、方案與版本變動。
+- **官方方案頁**：[OpenAI](https://chatgpt.com/pricing/) · [Anthropic](https://claude.com/pricing) · [Google](https://one.google.com/explore-plan/ai-premium) · [xAI](https://grok.com/plans) · [Cursor](https://www.cursor.com/pricing)
+
+> 本頁比較的是決策起點，不是永久排名。請把查證日期、地區、方案、工具版本與實測結果一起記錄。
 
 ---
 
@@ -126,7 +130,7 @@
 **IDE 工具：** [Google Antigravity](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/)（基於 VS Code 改造的 AI-First IDE，AI Pro 以上方案適用）
 **CLI 工具：** [Gemini CLI](https://github.com/google-gemini/gemini-cli)（開源，免費帳號即有基本用量）
 
-> 💡 **CP 值亮點：** Google AI Pro 除了 AI 功能，還附 2TB Google 雲端空間，如果你本來就在用 Google 全家桶，這個方案很划算。
+> 💡 **容量提醒：** 本文件表格整理為 5TB；Google 方案容量可能依地區、方案名稱與官方更新而變動，請以 [Google 官方方案頁](https://one.google.com/explore-plan/ai-premium) 在購買當日顯示的容量為準。
 
 ---
 

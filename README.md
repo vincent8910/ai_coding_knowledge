@@ -14,6 +14,8 @@
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
 - [變更驗收 SOP](VALIDATION-SOP.md) — diff、測試、人工確認與 rollback
+- [AI Coding 安全與治理](AI-CODING-SECURITY.md) — sandbox、context boundary、prompt injection 與權限
+- [AI Coding 任務評估](AI-CODING-EVALUATION.md) — 固定 benchmark、成本、可靠性與安全紀錄
 - [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 常用術語速查 → [完整版](GLOSSARY.md)
 ---
 

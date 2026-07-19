@@ -39,6 +39,8 @@ INSTALL.md         — 零基礎安裝手冊（macOS + Windows + Git Bash）
 CHEATSHEET.md      — 指令速查卡（基礎操作 / SuperClaude / MCP / 旗標）
 USE_CASES.md       — 14 個使用場景（初級→中級→進階），按角色推薦
 VALIDATION-SOP.md  — AI Coding 變更驗收 SOP（diff / 測試 / 人工確認 / rollback）
+AI-CODING-SECURITY.md — AI Coding 安全與治理（sandbox / context boundary / prompt injection）
+AI-CODING-EVALUATION.md — 固定 benchmark 與跨工具任務評估框架
 GLOSSARY.md        — 完整術語速查手冊（8 大分類 + 比喻對照總表）
 terms/             — 42 個專有名詞獨立說明頁（每頁：白話解釋 + 比喻 + 官方連結）
 ```

@@ -34,6 +34,28 @@
    - 確認 commit／branch／rollback 路徑清楚。
    - 未通過驗收不得合併或部署。
 
+## 安全邊界與 Agent budget
+
+在執行前額外記錄：
+
+- Agent 可見的目錄與檔案範圍。
+- 可用工具、shell、MCP、Docker／remote session 與網路出口。
+- 最大工具呼叫數、subagent 數、執行時間與 retry 次數。
+- secrets、production endpoint 與 destructive command 的禁止範圍。
+
+驗收時必須加入負向測試：
+
+- 含 prompt injection 的外部文件不能改變原始任務。
+- symlink 不得讀寫 repository 外檔案。
+- `rm`、deploy、資料庫 destructive operation 必須拒絕或要求人工確認。
+- 背景任務取消後，確認子程序、MCP session 與暫存檔確實清理。
+
+產品版本、sandbox 行為與權限語法都可能變更；請把工具版本與設定一併記錄。詳見 [AI-CODING-SECURITY.md](AI-CODING-SECURITY.md)。
+
+## 評估紀錄
+
+若要比較不同工具，使用固定任務、固定成功條件與獨立 worktree，記錄工具／版本、測試結果、工具呼叫數、成本、耗時、人工介入與安全事件。詳見 [AI-CODING-EVALUATION.md](AI-CODING-EVALUATION.md)。
+
 ## 最小回報格式
 
 ```text
