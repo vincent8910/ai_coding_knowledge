@@ -13,9 +13,8 @@
   - 進階：[Skill](SKILLS.md) · [Plugin](PLUGINS.md) · [Hooks](HOOKS.md) · [MCP](MCP-GUIDE.md) · [Subagent](SUBAGENTS.md) · [Computer Use](COMPUTER-USE.md) · [專案指令檔](PROJECT-INSTRUCTIONS.md) · [Agent Teams](AGENT-TEAMS.md)
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
-- [變更驗收 SOP](VALIDATION-SOP.md) — diff、測試、人工確認與 rollback
-- [AI Coding 安全與治理](AI-CODING-SECURITY.md) — sandbox、context boundary、prompt injection 與權限
-- [AI Coding 任務評估](AI-CODING-EVALUATION.md) — 固定 benchmark、成本、可靠性與安全紀錄
+- [工程治理路徑](#工程治理路徑再建立可控可驗證的-agent-系統) — 安全、驗收、評估與多代理
+  - [VALIDATION-SOP](VALIDATION-SOP.md) · [AI Coding 安全](AI-CODING-SECURITY.md) · [AI Coding 評估](AI-CODING-EVALUATION.md) · [Agent Workflow](AGENT-WORKFLOW.md) · [版本追蹤](TOOL-VERSION-TRACKING.md)
 - [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 常用術語速查 → [完整版](GLOSSARY.md)
 ---
 
@@ -28,6 +27,28 @@
 - 尚待實測的社群說法與效率估計
 
 因此，文件中的時間、價格、模型能力與效率數字都不是保證；使用前請依官方文件與自己的任務做驗證。
+
+---
+
+## 兩條學習路徑
+
+### 入門路徑｜先讓 AI 安全完成一件小事
+
+適合第一次接觸 AI Coding 的讀者：
+
+`README → COMPARISON → INSTALL → USE_CASES → GIT／rollback`
+
+目標是完成一個低風險、可回復的文件或小型測試任務，不需要先學會所有 Agent 技術。
+
+### 工程治理路徑｜再建立可控、可驗證的 Agent 系統
+
+適合工程師、團隊與需要長期維護的人：
+
+`PROJECT-INSTRUCTIONS → VALIDATION-SOP → AI-CODING-SECURITY → AI-CODING-EVALUATION → MCP → SUBAGENTS → AGENT-WORKFLOW`
+
+這條路徑涵蓋 context、permission、trust、sandbox、prompt injection、budget、背景任務、固定 benchmark、人工 review 與 rollback。
+
+第一批正式比較工具為：**Claude Code、Gemini CLI、Codex CLI**。工具特定行為都必須附版本、官方來源與查證日期。
 
 ---
 
