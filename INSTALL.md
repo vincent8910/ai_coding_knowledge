@@ -8,14 +8,14 @@
 
 AI Coding 工具有兩大選擇，你可以選一個或兩個都裝：
 
-| | [Claude Code](terms/terminal-cli.md) | [Google Antigravity](terms/antigravity.md) |
-|---|---|---|
-| **長什麼樣** | 黑色文字畫面（Terminal） | 有按鈕的桌面軟體（IDE） |
-| **比喻** | 管家熱線——用文字指揮 | AI 超級辦公桌——坐下來就能用 |
-| **學習門檻** | 要學一點指令 | 更直覺，像用一般軟體 |
-| **費用** | 需要 Anthropic API Key（付費） | 免費（需 Google 帳號） |
-| **Skill 支援** | ✅ 原生支援 | ✅ 相容 |
-| **適合誰** | 想要更高控制力的人 | 不想碰 Terminal 的人 |
+| | [Claude Code](terms/terminal-cli.md) | [Google Antigravity](terms/antigravity.md) | Gemini CLI | Codex CLI |
+|---|---|---|---|---|
+| **長什麼樣** | 黑色文字畫面（Terminal） | 有按鈕的桌面軟體（IDE） | Terminal 裡的命令列工具 | Terminal 裡的命令列工具 |
+| **比喻** | 管家熱線——用文字指揮 | AI 超級辦公桌——坐下來就能用 | Google 的命令列管家 | OpenAI 的命令列管家 |
+| **學習門檻** | 要學一點指令 | 更直覺，像用一般軟體 | 需要基本 Terminal 與 Git | 需要基本 Terminal 與 Git |
+| **費用／登入** | 訂閱登入或 API／provider，依方案而定 | 依 Google 帳號與方案 | 依 Google 帳號／方案與 CLI 政策 | 依 OpenAI 登入／provider 與方案而定 |
+| **Skill／MCP** | ✅ 原生支援 | ✅ 相容 | 依版本與設定支援 | 依版本與設定支援 |
+| **適合誰** | 想要更高控制力的人 | 不想碰 Terminal 的人 | 想用 Google CLI workflow 的人 | 想用 OpenAI CLI workflow 的人 |
 
 > 💡 **不確定選哪個？** 建議先裝 **Antigravity**（免費、門檻低），等你熟悉了再嘗試 Claude Code。兩者的 [Skill（專業證照）](terms/skill.md) 是通用的，學一次就能帶著走。
 
@@ -203,6 +203,98 @@ claude
 | `command not found: claude` | 關掉 Terminal 重開。還是不行就重裝 |
 | API Key 無效 | 回 [Anthropic Console](https://console.anthropic.com/) 確認 Key 還在，重新複製 |
 | 安裝或使用超慢 | 確認網路正常，公司內部可能需洽 IT 設定 Proxy |
+
+---
+
+## 路線 C：安裝 Gemini CLI
+
+> 📌 這條路線適合想用 Google 的命令列 Agent workflow；stable、preview、nightly 請分開看待。
+
+Gemini CLI 官方 repository 與 release：
+[google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli/releases)
+
+### 安裝
+
+請依官方 README 的目前安裝方式執行。常見 Node.js 路線是：
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+確認版本：
+
+```bash
+gemini --version
+```
+
+### 登入與 smoke test
+
+```bash
+gemini
+```
+
+第一次啟動依畫面完成 Google 登入或 provider 設定，然後在 temporary repository 執行低風險測試：
+
+```text
+請只讀取目前目錄的 README，列出三個重點；不要修改檔案，也不要執行其他命令。
+```
+
+記錄 CLI 版本、登入方式、OS、sandbox／workspace trust 設定與實際輸出。Preview／nightly 不作穩定教學基準。
+
+### 移除
+
+```bash
+npm uninstall -g @google/gemini-cli
+```
+
+實際套件名稱或登入方式若隨版本變更，請以官方文件為準。
+
+---
+
+## 路線 D：安裝 Codex CLI
+
+> 📌 這條路線適合想用 OpenAI Codex 的命令列 Agent workflow。stable 與 alpha 必須分開記錄。
+
+官方來源：
+[openai/codex releases](https://github.com/openai/codex/releases)
+
+### 安裝
+
+請依官方 repository 的最新安裝說明選擇平台與 provider。若使用 npm 發布版本，常見形式為：
+
+```bash
+npm install -g @openai/codex
+```
+
+確認版本：
+
+```bash
+codex --version
+```
+
+> ⚠️ 套件名稱、登入方式與執行檔名稱可能依 release 改變；若命令不存在，不要猜測替代套件，請回到官方 release／README 查證。
+
+### 登入與 smoke test
+
+```bash
+codex
+```
+
+先在 temporary repository 執行唯讀任務：
+
+```text
+只讀取目前目錄的 README，列出三個重點；不要修改檔案、不要執行 shell 命令、不要連線外部服務。
+```
+
+記錄 CLI 版本、模型／provider、sandbox、network policy、可見路徑與實際結果。alpha 版本只作觀察，不納入穩定安裝主線。
+
+### 移除
+
+```bash
+npm uninstall -g @openai/codex
+```
+
+實際套件與移除方式以官方 repository 的當前說明為準。
 
 ---
 

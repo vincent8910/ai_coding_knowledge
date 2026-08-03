@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | 依最新 release 更新 | 待查證 | [Anthropic releases](https://github.com/anthropics/claude-code/releases) | 背景 Agent、sandbox、subagent 行為需綁版本 |
-| Gemini CLI | 依 stable／preview 分列 | 待查證 | [Gemini CLI releases](https://github.com/google-gemini/gemini-cli/releases) | preview／nightly 不作穩定教學基準 |
-| Codex CLI | 依 stable／alpha 分列 | 待查證 | [OpenAI Codex releases](https://github.com/openai/codex/releases) | alpha 只作觀察，不推論永久能力 |
+| Claude Code | v2.1.220 | 2026-08-03 Asia/Taipei | [Anthropic v2.1.220](https://github.com/anthropics/claude-code/releases/tag/v2.1.220) | stable；v2.1.219 的 sandbox、nested subagent 與 workflow 行為需綁版本實測 |
+| Gemini CLI | v0.53.1 stable；v0.54.0-preview.1 另列觀察 | 2026-08-03 Asia/Taipei | [Gemini releases](https://github.com/google-gemini/gemini-cli/releases) | stable／preview 分開；preview／nightly 不作穩定教學基準 |
+| Codex CLI | v0.146.0 stable；v0.147.0-alpha.4 另列觀察 | 2026-08-03 Asia/Taipei | [Codex v0.146.0](https://github.com/openai/codex/releases/tag/rust-v0.146.0) | stable／alpha 分開；alpha 只作觀察，不推論永久能力 |
 
 ## 每次更新必記錄
 

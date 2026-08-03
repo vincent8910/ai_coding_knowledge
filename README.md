@@ -14,7 +14,7 @@
 - [這份指南適合誰？](#這份指南適合誰) — 適合 / 不適合的人
 - [核心觀念：AI 工具的三層進化](#核心觀念ai-工具的三層進化) — 顧問 → 員工 → 特遣隊
 - [工程治理路徑](#工程治理路徑再建立可控可驗證的-agent-系統) — 安全、驗收、評估與多代理
-  - [VALIDATION-SOP](VALIDATION-SOP.md) · [AI Coding 安全](AI-CODING-SECURITY.md) · [AI Coding 評估](AI-CODING-EVALUATION.md) · [Agent Workflow](AGENT-WORKFLOW.md) · [版本追蹤](TOOL-VERSION-TRACKING.md)
+  - [VALIDATION-SOP](VALIDATION-SOP.md) · [AI Coding 安全](AI-CODING-SECURITY.md) · [AI Coding 評估](AI-CODING-EVALUATION.md) · [Benchmark 計畫](examples/benchmark-plan.md) · [MCP v2 遷移](MCP-V2-MIGRATION.md) · [Agent Workflow](AGENT-WORKFLOW.md) · [版本追蹤](TOOL-VERSION-TRACKING.md)
 - [專有名詞速查](#-專有名詞速查不懂的詞來這裡查) — 常用術語速查 → [完整版](GLOSSARY.md)
 ---
 

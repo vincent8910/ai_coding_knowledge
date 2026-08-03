@@ -11,6 +11,7 @@
 - [怎麼安裝 MCP Server？](#怎麼安裝-mcp-server) — Claude Code 跟 Antigravity 兩條路線
 - [推薦 MCP Server：15 個最實用的](#推薦-mcp-server15-個最實用的) — 分四大類，附安裝指令
 - [動手做：安裝你的第一個 MCP Server](#動手做安裝你的第一個-mcp-server) — 手把手帶你裝 Tavily 搜尋引擎
+- [MCP 版本與遷移](MCP-V2-MIGRATION.md) — protocol 2026-07-28 與 SDK v2 相容性
 - [MCP 安全注意事項](#mcp-安全注意事項) — 別讓 AI 拿到不該拿的鑰匙
 - [下一步](#下一步) — 裝好感官之後，接下來要幹嘛？
 
