@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.233 | 2026-08-17 Asia/Taipei | [Anthropic v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233) | stable；未在本專案重新執行 sandbox、nested subagent 與 workflow 實測，不把 release note 當成行為保證 |
-| Gemini CLI | v0.55.1 stable；v0.56.0-nightly.20260816 另列觀察 | 2026-08-17 Asia/Taipei | [Gemini v0.55.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.55.1) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260816.g2a87e7be1) | stable／nightly 分開；nightly 不作穩定教學基準 |
-| Codex CLI | v0.147.0 stable；v0.148.0-alpha.20 另列觀察 | 2026-08-17 Asia/Taipei | [Codex v0.147.0](https://github.com/openai/codex/releases/tag/rust-v0.147.0) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.20) | stable／alpha 分開；alpha 只作觀察，不推論永久能力 |
+| Claude Code | v2.1.234 | 2026-08-18 Asia/Taipei | [Anthropic v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234) | stable；未在本專案重新執行 sandbox、nested subagent 與 workflow 實測，不把 release note 當成行為保證 |
+| Gemini CLI | v0.55.1 stable；v0.56.0-nightly.20260817 另列觀察 | 2026-08-18 Asia/Taipei | [Gemini v0.55.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.55.1) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260817.g9a15c45fb) | stable／nightly 分開；nightly 不作穩定教學基準 |
+| Codex CLI | v0.147.0 stable；v0.148.0-alpha.21 另列觀察 | 2026-08-18 Asia/Taipei | [Codex v0.147.0](https://github.com/openai/codex/releases/tag/rust-v0.147.0) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21) | stable／alpha 分開；alpha 只作觀察，不推論永久能力 |
 
 ## 每次更新必記錄
 
