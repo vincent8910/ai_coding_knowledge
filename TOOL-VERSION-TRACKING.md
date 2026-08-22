@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.236 stable；v2.1.235 為前次查證 | 2026-08-20 Asia/Taipei | [Anthropic v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236) | stable；release note 宣稱新增 `ANTHROPIC_DEFAULT_MODEL`、跨 session `notify_when_idle`，並改善 macOS sandbox deny 規則；未在本專案重新執行 sandbox、nested subagent 與 workflow 實測，不把 release note 當成行為保證 |
-| Gemini CLI | v0.56.0 stable；v0.57.0-preview.0 與 nightly 另列觀察 | 2026-08-20 Asia/Taipei | [Gemini v0.56.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260819.g571851b10) | stable／preview／nightly 分開；preview 與 nightly 不作穩定教學基準 |
-| Codex CLI | v0.148.0 stable；v0.149.0-alpha.2 另列觀察 | 2026-08-20 Asia/Taipei | [Codex v0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2) | stable／alpha 分開；release note 宣稱 `/export`、session fork、Bedrock provider、可非同步執行 hook／MCP，以及 sandbox fail-closed 修正；alpha 只作觀察，不推論永久能力 |
+| Claude Code | v2.1.239 stable；v2.1.238 為前次查證 | 2026-08-22 Asia/Taipei | [Anthropic v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) | stable；release note 宣稱成本估算納入美國境內推理加成、`/claude-api upgrade`、同步 plugin 標記與多項 proxy／MCP／session 修正；未在本專案重新執行 sandbox、nested subagent 與 workflow 實測，不把 release note 當成行為保證 |
+| Gemini CLI | v0.56.0 stable；v0.57.0-preview.0 與 nightly 另列觀察 | 2026-08-22 Asia/Taipei | [Gemini v0.56.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260821.g30573d2e4) | stable／preview／nightly 分開；preview 與 nightly 不作穩定教學基準；目前未觀察到新的 stable release |
+| Codex CLI | v0.149.0 stable；v0.150.0-alpha.6 另列觀察 | 2026-08-22 Asia/Taipei | [Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6) | stable／alpha 分開；stable release note 宣稱新增 `codex agents` dashboard、`/cd`／`/pwd`／`/cwd`、`codex queue` 與改善 `codex doctor`；alpha 只作觀察，不推論永久能力 |
 
 ## 每次更新必記錄
 
