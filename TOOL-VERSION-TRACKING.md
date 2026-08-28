@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.239 stable；v2.1.238 為前次查證 | 2026-08-22 Asia/Taipei | [Anthropic v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) | stable；release note 宣稱成本估算納入美國境內推理加成、`/claude-api upgrade`、同步 plugin 標記與多項 proxy／MCP／session 修正；未在本專案重新執行 sandbox、nested subagent 與 workflow 實測，不把 release note 當成行為保證 |
-| Gemini CLI | v0.56.0 stable；v0.57.0-preview.0 與 nightly 另列觀察 | 2026-08-22 Asia/Taipei | [Gemini v0.56.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260821.g30573d2e4) | stable／preview／nightly 分開；preview 與 nightly 不作穩定教學基準；目前未觀察到新的 stable release |
-| Codex CLI | v0.149.0 stable；v0.150.0-alpha.6 另列觀察 | 2026-08-22 Asia/Taipei | [Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6) | stable／alpha 分開；stable release note 宣稱新增 `codex agents` dashboard、`/cd`／`/pwd`／`/cwd`、`codex queue` 與改善 `codex doctor`；alpha 只作觀察，不推論永久能力 |
+| Claude Code | v2.1.250 stable；v2.1.239 為前次查證 | 2026-08-28 Asia/Taipei | [Anthropic v2.1.250](https://github.com/anthropics/claude-code/releases/tag/v2.1.250) | stable；本次只確認官方 release tag 與發布時間，未取得可供摘要的 release body，也未在本專案重新執行 sandbox、nested subagent 與 workflow 實測；不把版本存在當成行為保證 |
+| Gemini CLI | v0.57.0 stable；v0.58.0-preview.0 與 v0.59.0-nightly.20260827.g3c311beac 另列觀察 | 2026-08-28 Asia/Taipei | [Gemini v0.57.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260827.g3c311beac) | stable／preview／nightly 分開；stable release note 可確認為 v0.56.0 → v0.57.0，未把 preview 與 nightly 納入穩定教學基準 |
+| Codex CLI | v0.150.1 stable；v0.151.0-alpha.7 另列觀察 | 2026-08-28 Asia/Taipei | [Codex v0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7) | stable／alpha 分開；v0.150.1 release note 可確認為保留影像壓縮預算修正的 backport，未在本專案重新執行 workflow 實測；alpha 只作觀察，不推論永久能力 |
 
 ## 每次更新必記錄
 
@@ -27,3 +27,10 @@
 2. preview／nightly／alpha 必須明確標示，不得放進穩定安裝主線。
 3. 價格、方案、額度與 CLI 使用資格需另外記錄地區與方案前提。
 4. 版本變更若影響權限、sandbox、背景任務或 MCP，必須同步檢查 Security、Validation 與 Agent Workflow 文件。
+
+## 外部生態觀察（不納入第一批穩定比較基準）
+
+| 項目 | 狀態 | 查證日期 | 官方來源 | 解讀邊界 |
+|---|---|---|---|---|
+| GitHub Agent Plugins 1.0 | generally available | 2026-08-28 Asia/Taipei | [GitHub Changelog 2026-08-12](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/) | 開放標準可將 skills 與 MCP server 打包，並由相容 client 共用；本專案尚未對 VS Code、Copilot CLI 或 Copilot app 做安裝／相容性實測，不列入 Claude Code、Gemini CLI、Codex CLI 的正式比較結論 |
+| GitHub Copilot code review 的 Agent skills／MCP | generally available | 2026-08-28 Asia/Taipei | [GitHub Changelog 2026-07-29](https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/) | 官方說明包含唯讀 MCP tool calls 與 skills；這是 GitHub Copilot code review 的產品能力，不可直接推論其他 client 具備相同行為 |
