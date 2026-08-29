@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.250 stable；v2.1.239 為前次查證 | 2026-08-28 Asia/Taipei | [Anthropic v2.1.250](https://github.com/anthropics/claude-code/releases/tag/v2.1.250) | stable；本次只確認官方 release tag 與發布時間，未取得可供摘要的 release body，也未在本專案重新執行 sandbox、nested subagent 與 workflow 實測；不把版本存在當成行為保證 |
-| Gemini CLI | v0.57.0 stable；v0.58.0-preview.0 與 v0.59.0-nightly.20260827.g3c311beac 另列觀察 | 2026-08-28 Asia/Taipei | [Gemini v0.57.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260827.g3c311beac) | stable／preview／nightly 分開；stable release note 可確認為 v0.56.0 → v0.57.0，未把 preview 與 nightly 納入穩定教學基準 |
-| Codex CLI | v0.150.1 stable；v0.151.0-alpha.7 另列觀察 | 2026-08-28 Asia/Taipei | [Codex v0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7) | stable／alpha 分開；v0.150.1 release note 可確認為保留影像壓縮預算修正的 backport，未在本專案重新執行 workflow 實測；alpha 只作觀察，不推論永久能力 |
+| Claude Code | v2.1.251 stable；v2.1.250 為前次查證 | 2026-08-29 Asia/Taipei | [Anthropic v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | stable；官方 release body 可確認新增 model-switch hooks、foreground subagent Remote Control streaming，並修正 symlink path traversal、plugin path traversal 與 Grep／Glob deny-rule 邊界；未在本專案重新執行行為實測，不把版本存在當成行為保證 |
+| Gemini CLI | v0.57.0 stable；v0.58.0-preview.0 與 v0.59.0-nightly.20260828.g3c311beac 另列觀察 | 2026-08-29 Asia/Taipei | [Gemini v0.57.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260828.g3c311beac) · [release channels](https://github.com/google-gemini/gemini-cli#release-channels) | stable／preview／nightly 分開；stable release note 可確認為 v0.56.0 → v0.57.0；nightly 僅更新至 2026-08-28 觀察值，未納入穩定教學基準 |
+| Codex CLI | v0.150.1 stable；v0.151.0-alpha.11 另列觀察 | 2026-08-29 Asia/Taipei | [Codex v0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1) · [alpha](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.11) | stable／alpha 分開；v0.150.1 release note 可確認為保留影像壓縮預算修正的 backport；alpha 只作觀察，不推論永久能力，未在本專案重新執行 workflow 實測 |
 
 ## 每次更新必記錄
 
@@ -32,5 +32,6 @@
 
 | 項目 | 狀態 | 查證日期 | 官方來源 | 解讀邊界 |
 |---|---|---|---|---|
-| GitHub Agent Plugins 1.0 | generally available | 2026-08-28 Asia/Taipei | [GitHub Changelog 2026-08-12](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/) | 開放標準可將 skills 與 MCP server 打包，並由相容 client 共用；本專案尚未對 VS Code、Copilot CLI 或 Copilot app 做安裝／相容性實測，不列入 Claude Code、Gemini CLI、Codex CLI 的正式比較結論 |
-| GitHub Copilot code review 的 Agent skills／MCP | generally available | 2026-08-28 Asia/Taipei | [GitHub Changelog 2026-07-29](https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/) | 官方說明包含唯讀 MCP tool calls 與 skills；這是 GitHub Copilot code review 的產品能力，不可直接推論其他 client 具備相同行為 |
+| GitHub Agent Plugins 1.0 | generally available | 2026-08-29 Asia/Taipei | [GitHub Changelog 2026-08-12](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/) | 開放標準可將 skills 與 MCP server 打包，並由相容 client 共用；本專案尚未對 VS Code、Copilot CLI 或 Copilot app 做安裝／相容性實測，不列入 Claude Code、Gemini CLI、Codex CLI 的正式比較結論 |
+| GitHub Copilot code review 的 Agent skills／MCP | generally available | 2026-08-29 Asia/Taipei | [GitHub Changelog 2026-07-29](https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/) | 官方說明包含唯讀 MCP tool calls 與 skills；這是 GitHub Copilot code review 的產品能力，不可直接推論其他 client 具備相同行為 |
+| GitHub Copilot in Slack | public preview | 2026-08-29 Asia/Taipei | [GitHub Changelog 2026-08-21](https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/) | 可從 Slack 對話啟動、導向與接續 Copilot agent session；限 Copilot Business／Enterprise 且需管理員啟用 cloud agent policy，未納入第一批 CLI 正式比較，也未在本專案實測 |
