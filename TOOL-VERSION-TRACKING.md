@@ -6,9 +6,9 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.266 stable | 2026-09-09 Asia/Taipei | [Anthropic v2.1.266](https://github.com/anthropics/claude-code/releases/tag/v2.1.266) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | stable；修正 v2.1.265 造成的 `CLAUDE_CODE_USE_GATEWAY` regression，避免僅設定該變數時錯誤強制 Cloud gateway 登入；未在本專案重新執行行為實測，不把版本存在當成行為保證 |
+| Claude Code | v2.1.267 stable | 2026-09-10 Asia/Taipei | [Anthropic v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | stable；官方 release body 記錄 `maxEffortLevel`、`--system-prompt-snapshot off`，並修正 marketplace path containment、managed allowlist unreadable 時的 fail-closed 與多項 MCP／resume prompt-cache 問題；未在本專案重新執行行為實測，不把版本存在當成行為保證 |
 | Gemini CLI | v0.59.0 stable；v0.60.0-preview.0 與 v0.60.0-nightly.20260908.g85aca163f 另列觀察 | 2026-09-09 Asia/Taipei | [Gemini v0.59.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260908.g85aca163f) · [release channels](https://github.com/google-gemini/gemini-cli#release-channels) | stable／preview／nightly 分開；v0.59.0 release body 可確認 MCP OAuth metadata SSRF 修正與 restricted mode fail-closed workspace trust；preview 另含 macOS Seatbelt 暫存目錄隔離、MCP OAuth RFC 9207 issuer 驗證與 tool output provenance 強化；preview／nightly 不納入穩定教學基準 |
-| Codex CLI | v0.153.4 stable；v0.154.0-alpha.8 另列觀察 | 2026-09-09 Asia/Taipei | [Codex v0.153.4](https://github.com/openai/codex/releases/tag/rust-v0.153.4) · [v0.154.0-alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.8) | stable／alpha 分開；alpha.8 僅作觀察，未納入穩定教學基準；stable 版本未變，未在本專案重新執行 workflow 實測 |
+| Codex CLI | v0.154.0 stable；v0.154.0-alpha.11 另列觀察 | 2026-09-10 Asia/Taipei | [Codex v0.154.0](https://github.com/openai/codex/releases/tag/rust-v0.154.0) · [alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.11) | stable／alpha 分開；stable release body 記錄 experimental `--worktree`／`/worktree`、MCP OAuth refresh coordination，以及 trust 建立前不執行 workspace-controlled helper；alpha 僅作觀察，未納入穩定教學基準；未在本專案重新執行 workflow 實測 |
 
 ## 每次更新必記錄
 

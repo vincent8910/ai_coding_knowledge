@@ -115,11 +115,13 @@ MCP Client 就是使用這些感官器官的「大腦」。目前支援 MCP 的 
 
 | Client | 說明 |
 |--------|------|
-| **[Claude Code](terms/terminal-cli.md)** | Anthropic 官方的命令列工具，MCP 支援最完整 |
+| **[Claude Code](terms/terminal-cli.md)** | Anthropic 官方的命令列工具；實際可用能力需依 Claude Code 版本與 MCP server 驗證 |
 | **[Antigravity](terms/antigravity.md)** | Google 的 AI IDE，也支援 MCP |
 | **Claude Desktop** | Anthropic 的桌面 App，支援部分 MCP |
 
-你不用管 Client 怎麼跟 Server 溝通的——你只要負責「裝上去」就好，剩下的它們會自己搞定。
+不同 Client 對 MCP 版本、傳輸、授權與工具確認流程的支援不一定相同；不要因為某個 Client 能連線，就推論另一個 Client 也支援相同行為。安裝後仍應依 Client 與 Server 的官方文件做最小 smoke test。
+
+> **版本提示（查證：2026-09-10，stable）**：MCP 官方目前的 stable revision 是 [`2026-07-28`](https://modelcontextprotocol.io/specification/2026-07-28)。此版本引入 stateless request、MRTR、header-based routing 與授權強化，並將部分舊行為列為 deprecated；這不等於所有 Client／Server／SDK 已完成相容性升級。請參考 [MCP 版本與遷移](MCP-V2-MIGRATION.md) 並針對實際組合驗證。
 
 ### 3. 整體架構（超簡單版）
 
