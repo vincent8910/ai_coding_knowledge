@@ -121,7 +121,7 @@ MCP Client 就是使用這些感官器官的「大腦」。目前支援 MCP 的 
 
 不同 Client 對 MCP 版本、傳輸、授權與工具確認流程的支援不一定相同；不要因為某個 Client 能連線，就推論另一個 Client 也支援相同行為。安裝後仍應依 Client 與 Server 的官方文件做最小 smoke test。
 
-> **版本提示（查證：2026-09-10，stable）**：MCP 官方目前的 stable revision 是 [`2026-07-28`](https://modelcontextprotocol.io/specification/2026-07-28)。此版本引入 stateless request、MRTR、header-based routing 與授權強化，並將部分舊行為列為 deprecated；這不等於所有 Client／Server／SDK 已完成相容性升級。請參考 [MCP 版本與遷移](MCP-V2-MIGRATION.md) 並針對實際組合驗證。
+> **版本提示（查證：2026-09-12，stable）**：MCP 官方目前的 stable revision 是 [`2026-07-28`](https://modelcontextprotocol.io/specification/2026-07-28)。此版本引入 stateless request、MRTR、header-based routing 與授權強化，並將部分舊行為列為 deprecated；這不等於所有 Client／Server／SDK 已完成相容性升級。請參考 [MCP 版本與遷移](MCP-V2-MIGRATION.md) 並針對實際組合驗證。
 
 ### 3. 整體架構（超簡單版）
 
