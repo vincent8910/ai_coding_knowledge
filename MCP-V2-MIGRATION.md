@@ -8,7 +8,7 @@
 |---|---|---|
 | Protocol | 2026-07-28 stable revision | [MCP specification changelog](https://modelcontextprotocol.io/specification/2026-07-28/changelog) |
 | Python SDK | v2.3.0；v1 maintenance mode | [Python SDK v2.3.0](https://github.com/modelcontextprotocol/python-sdk/releases/tag/v2.3.0) |
-| TypeScript SDK | core v2.3.0 | [TypeScript SDK core v2.3.0](https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fcore%402.3.0) |
+| TypeScript SDK | core v2.3.1 | [TypeScript SDK core v2.3.1](https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol%2Fcore%402.3.1) |
 
 ## 主要變更
 
