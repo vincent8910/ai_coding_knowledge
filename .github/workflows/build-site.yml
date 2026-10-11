@@ -1,6 +1,7 @@
 name: Build Site
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -8,25 +9,65 @@ on:
       - 'terms/*.md'
       - 'scripts/**'
 
+# Queue site rebuilds so concurrent pushes do not race on main.
+concurrency:
+  group: build-site-main
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - run: node scripts/build-site-simple.js
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
-      - name: Commit updated site data
+      - name: Build site and commit generated data
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/pages.json docs/terms.json
-          git diff --cached --quiet || git commit -m "chore: 自動更新網站內容"
-          git push
+          set -euo pipefail
+
+          for attempt in 1 2 3; do
+            echo "Build/push attempt ${attempt}/3"
+
+            # The PM job may push while this run is building. Reset only the
+            # ephemeral runner to the latest remote main before each build;
+            # generated docs are recreated from the latest source.
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/build-site-simple.js
+
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add docs/pages.json docs/terms.json
+
+            if git diff --cached --quiet; then
+              echo "Generated site data is already up to date."
+              exit 0
+            fi
+
+            git commit -m "chore: 自動更新網站內容"
+
+            if git push origin HEAD:main; then
+              echo "Generated site data pushed successfully."
+              exit 0
+            fi
+
+            echo "Push raced with another main update; retrying from origin/main."
+            git reset --hard origin/main
+          done
+
+          echo "Unable to push generated site data after 3 attempts." >&2
+          exit 1
