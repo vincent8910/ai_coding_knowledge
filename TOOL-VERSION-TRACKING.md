@@ -2,14 +2,14 @@
 
 > 這份表只記錄需要綁定版本的短期資訊；長期概念請放在主題文章。每次更新工具特定內容時，附官方來源與查證日期。
 
-## 2026-10-31 官方資料複查
+## 2026-11-01 官方資料複查
 
 > 以下為本次查核補充；僅記錄官方發布資訊，不代表本專案已完成產品行為實測。版本狀態以官方 releases／changelog 為準。
 
 | 項目 | 官方狀態 | 查證日期 | 官方來源 | 解讀邊界 |
 |---|---|---|---|---|
-| Claude Code | v2.1.314 stable | 2026-10-31 Asia/Taipei | [Claude Code releases](https://github.com/anthropics/claude-code/releases) | Releases API 最新非 prerelease 為 v2.1.314（2026-10-30 01:06 UTC）；僅核對發布資訊，未安裝或重測。 |
-| Gemini CLI | v0.66.0 stable；v0.67.0-preview.0、v0.67.0-nightly.20261030.gb633c0703 另列 | 2026-10-31 Asia/Taipei | [Releases](https://github.com/google-gemini/gemini-cli/releases) · [Release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | stable、preview、nightly 分層；v0.66.0 發布於 2026-10-27；不以 preview/nightly 取代 stable 教學基準。 |
+| Claude Code | v2.1.316 stable | 2026-11-01 Asia/Taipei | [Claude Code releases](https://github.com/anthropics/claude-code/releases) · [v2.1.316 release notes](https://github.com/anthropics/claude-code/releases/tag/v2.1.316) | Releases API 最新非 prerelease 為 v2.1.316（2026-10-31 01:01 UTC）；release note 提及 `--restricted` sessions 的檔案上傳邊界修正及其他 shell／permission 修正；僅核對發布資訊，未安裝或重測。 |
+| Gemini CLI | v0.66.0 stable；v0.67.0-preview.0、v0.67.0-nightly.20261031.g6814e00d6 另列 | 2026-11-01 Asia/Taipei | [Releases](https://github.com/google-gemini/gemini-cli/releases) · [Release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | stable、preview、nightly 分層；v0.66.0 發布於 2026-10-27；不以 preview/nightly 取代 stable 教學基準。 |
 | Codex CLI | v0.166.0 stable；v0.166.0-alpha.6 另列觀察 | 2026-10-31 Asia/Taipei | [Codex releases](https://github.com/openai/codex/releases) | 最新非 prerelease 為 rust-v0.166.0（2026-10-29 19:47 UTC）；alpha 僅觀察。本專案未安裝／實測。 |
 | MCP Python SDK | v2.3.0 latest stable | 2026-10-31 Asia/Taipei | [Python SDK releases](https://github.com/modelcontextprotocol/python-sdk/releases) | API latest stable v2.3.0；未見較新正式版；SDK 版本不等於相容性測試。 |
 | MCP TypeScript SDK | v2.4.0 latest stable | 2026-10-31 Asia/Taipei | [TypeScript SDK releases](https://github.com/modelcontextprotocol/typescript-sdk/releases) | API 最新 release 為 v2.4.0（2026-10-23）；未在本專案執行 SDK 測試。 |
@@ -20,8 +20,8 @@
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.314 stable | 2026-10-31 Asia/Taipei | [Anthropic v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 最新非 prerelease；本專案未重新執行行為實測，不把版本存在當成能力或相容性保證 |
-| Gemini CLI | v0.66.0 stable；v0.67.0-preview.0 與 v0.67.0-nightly.20261030.gb633c0703 另列觀察 | 2026-10-31 Asia/Taipei | [Gemini v0.66.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261030.gb633c0703) · [release channels](https://github.com/google-gemini/gemini-cli#release-channels) | stable／preview／nightly 分開；preview／nightly 僅作觀察，不納入穩定教學基準；未重做 workflow 實測 |
+| Claude Code | v2.1.316 stable | 2026-11-01 Asia/Taipei | [Anthropic v2.1.316](https://github.com/anthropics/claude-code/releases/tag/v2.1.316) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 最新非 prerelease；release note 提及 `--restricted` session 檔案上傳邊界等修正；本專案未重新執行行為實測，不把版本存在當成能力或相容性保證 |
+| Gemini CLI | v0.66.0 stable；v0.67.0-preview.0 與 v0.67.0-nightly.20261031.g6814e00d6 另列觀察 | 2026-11-01 Asia/Taipei | [Gemini v0.66.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0) · [preview](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-preview.0) · [nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261031.g6814e00d6) · [release channels](https://github.com/google-gemini/gemini-cli#release-channels) | stable／preview／nightly 分開；preview／nightly 僅作觀察，不納入穩定教學基準；未重做 workflow 實測 |
 | Codex CLI | v0.166.0 stable；v0.166.0-alpha.6 另列觀察 | 2026-10-31 Asia/Taipei | [Codex v0.166.0](https://github.com/openai/codex/releases/tag/rust-v0.166.0) · [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.166.0-alpha.6) | stable／alpha 分開；release note 涵蓋 transcript 操作、`codex queue --resume`、`codex doctor --network-only` 等；alpha 僅觀察，不納入穩定基準；未重做 workflow 實測 |
 
 ## 每次更新必記錄
