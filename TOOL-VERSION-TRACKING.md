@@ -2,27 +2,27 @@
 
 > 這份表只記錄需要綁定版本的短期資訊；長期概念請放在主題文章。每次更新工具特定內容時，附官方來源與查證日期。
 
-## 2026-11-11 官方資料複查
+## 2026-11-12 官方資料複查
 
 > 以下為官方發布與版本狀態複查；不代表本專案已安裝或完成產品行為實測。GitHub Releases API 顯示時間為 UTC；查證日期採 Asia/Taipei。Preview／alpha 僅列觀察，不納入 stable 基準。
 
 | 項目 | 官方狀態 | 查證日期 | 官方來源 | 解讀邊界 |
 |---|---|---|---|---|
-| Claude Code | v2.1.322 stable | 2026-11-11 Asia/Taipei | [Claude Code releases](https://github.com/anthropics/claude-code/releases) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 顯示 2026-11-10 02:29 UTC 發布，新增 Vertex global／US／EU regions fast mode，Vertex 不支援時回退 standard speed；未在本專案實測。 |
-| Gemini CLI | v0.68.0 stable；v0.69.0-preview.0 觀察 | 2026-11-11 Asia/Taipei | [Releases](https://github.com/google-gemini/gemini-cli/releases) · [Release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | v0.68.0 為官方 Releases API 最新非 prerelease（2026-11-10）；preview 不納入 stable 基準。Release 包含 extension validation command 等變更；未安裝或重測。 |
-| Codex CLI | rust-v0.167.1 stable；rust-v0.169.0-alpha.9 觀察 | 2026-11-11 Asia/Taipei | [Codex releases](https://github.com/openai/codex/releases) | 官方 Releases API 最新非 prerelease 為 rust-v0.167.1（2026-11-10）；alpha 僅觀察。該 stable release 未提供詳細 body；本專案未安裝／實測。 |
-| MCP Python SDK | v2.3.0 latest stable | 2026-11-11 Asia/Taipei | [Python SDK releases](https://github.com/modelcontextprotocol/python-sdk/releases) | 官方 Releases API 最新非 prerelease 仍為 v2.3.0（2026-10-02）；SDK 版本不等於相容性測試。 |
-| MCP TypeScript SDK | v2.4.0 latest stable | 2026-11-11 Asia/Taipei | [TypeScript SDK releases](https://github.com/modelcontextprotocol/typescript-sdk/releases) | 官方 Releases API 最新非 prerelease 仍為 v2.4.0（2026-10-23）；未在本專案執行 SDK 測試。 |
-| MCP protocol | 2026-07-28 stable revision | 2026-11-11 Asia/Taipei | [Specification releases](https://github.com/modelcontextprotocol/specification/releases) · [Specification repository](https://github.com/modelcontextprotocol/specification) | 官方 Releases API 最新正式 revision 仍為 2026-07-28；repository commits 不等於新 stable protocol。 |
-| GitHub Changelog | 2026-11-09 至 11-10 更新 | 2026-11-11 Asia/Taipei | [Gemini 4 Carbon](https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/) · [Claude Fable 5.2](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/) · [Actions workflow log scanning](https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/) | Gemini 4 Carbon（Copilot GA）、Claude Fable 5.2（Copilot GA；預設資料保留，企業可用性需查政策／資格），以及 Actions workflow logs secret scanning（public preview，限符合條件的 Enterprise Cloud）；均為 GitHub 特定產品狀態，不推論三個正式比較 CLI 的能力，亦未在本專案實測。 |
+| Claude Code | v2.1.322 stable | 2026-11-12 Asia/Taipei | [Claude Code releases](https://github.com/anthropics/claude-code/releases) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 最新 stable 發布於 2026-11-10 02:29 UTC，新增 Vertex global／US／EU regions fast mode，Vertex 不支援時回退 standard speed；未在本專案實測。 |
+| Gemini CLI | v0.68.0 stable；v0.69.0-preview.0 觀察 | 2026-11-12 Asia/Taipei | [Releases](https://github.com/google-gemini/gemini-cli/releases) · [Release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | v0.68.0 為官方 Releases API 最新非 prerelease（2026-11-10）；preview 不納入 stable 基準。未安裝或重測。 |
+| Codex CLI | rust-v0.167.2 stable；rust-v0.170.0-alpha.1 觀察 | 2026-11-12 Asia/Taipei | [Codex releases](https://github.com/openai/codex/releases) | 官方 Releases API 最新非 prerelease 為 rust-v0.167.2（2026-11-11 22:44 UTC）；alpha 僅觀察。未在本專案安裝／實測。 |
+| MCP Python SDK | v2.3.0 latest stable | 2026-11-12 Asia/Taipei | [Python SDK releases](https://github.com/modelcontextprotocol/python-sdk/releases) | 官方 Releases API 最新非 prerelease 仍為 v2.3.0（2026-10-02）；SDK 版本不等於相容性測試。 |
+| MCP TypeScript SDK | v2.4.0 latest stable | 2026-11-12 Asia/Taipei | [TypeScript SDK releases](https://github.com/modelcontextprotocol/typescript-sdk/releases) | 官方 Releases API 最新非 prerelease 仍為 v2.4.0（2026-10-23）；未在本專案執行 SDK 測試。 |
+| MCP protocol | 2026-07-28 stable revision | 2026-11-12 Asia/Taipei | [Specification releases](https://github.com/modelcontextprotocol/specification/releases) · [Specification repository](https://github.com/modelcontextprotocol/specification) | 官方 Releases API 最新正式 revision 仍為 2026-07-28；repository commits 不等於新 stable protocol。 |
+| GitHub Changelog | 2026-11-09 至 11-10 更新 | 2026-11-12 Asia/Taipei | [Gemini 4 Carbon](https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/) · [Claude Fable 5.2](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/) · [Actions workflow log scanning](https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/) | Gemini 4 Carbon（Copilot GA）、Claude Fable 5.2（Copilot GA；企業可用性需查政策／資格），以及 Actions workflow logs secret scanning（public preview）；均為 GitHub 特定產品狀態，不推論三個正式比較 CLI 的能力，亦未在本專案實測。 |
 
 ## 第一批正式比較對象
 
 | 工具 | Stable／版本 | 查證日期 | 官方來源 | 穩定度與限制 |
 |---|---|---|---|---|
-| Claude Code | v2.1.322 stable | 2026-11-11 Asia/Taipei | [Anthropic releases](https://github.com/anthropics/claude-code/releases) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 顯示 2026-11-10 發布；Vertex fast mode 更新未在本專案重測，不把版本存在當成能力或相容性保證 |
-| Gemini CLI | v0.68.0 stable；v0.69.0-preview.0 另列觀察 | 2026-11-11 Asia/Taipei | [Gemini v0.68.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0) · [release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | v0.68.0 為官方 Releases API 最新非 prerelease（2026-11-10）；preview／nightly 不納入穩定教學基準；未重做 workflow 實測 |
-| Codex CLI | v0.167.1 stable；v0.169.0-alpha.9 另列觀察 | 2026-11-11 Asia/Taipei | [Codex v0.167.1](https://github.com/openai/codex/releases/tag/rust-v0.167.1) · [alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.9) | 官方 Releases API 最新非 prerelease 為 rust-v0.167.1（2026-11-10）；alpha 僅觀察，不納入穩定基準；未重做 workflow 實測 |
+| Claude Code | v2.1.322 stable | 2026-11-12 Asia/Taipei | [Anthropic releases](https://github.com/anthropics/claude-code/releases) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 顯示最新 stable 於 2026-11-10 發布；Vertex fast mode 更新未在本專案重測，不把版本存在當成能力或相容性保證 |
+| Gemini CLI | v0.68.0 stable；v0.69.0-preview.0 另列觀察 | 2026-11-12 Asia/Taipei | [Gemini v0.68.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0) · [release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | v0.68.0 為官方 Releases API 最新非 prerelease（2026-11-10）；preview／nightly 不納入穩定教學基準；未重做 workflow 實測 |
+| Codex CLI | rust-v0.167.2 stable；rust-v0.170.0-alpha.1 另列觀察 | 2026-11-12 Asia/Taipei | [Codex v0.167.2](https://github.com/openai/codex/releases/tag/rust-v0.167.2) · [alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.1) | 官方 Releases API 最新非 prerelease 為 rust-v0.167.2（2026-11-11）；alpha 僅觀察，不納入穩定基準；未重做 workflow 實測 |
 
 ## 每次更新必記錄
 
