@@ -121,11 +121,13 @@ function markdownToHtml(md) {
       const level = headingMatch[1].length;
       const text = convertInline(headingMatch[2].replace(/\s*#+\s*$/, '')); // strip trailing #
       // Generate an id from heading text for anchoring
-      const id = headingMatch[2]
+      const rawHeading = headingMatch[2];
+      const startsWithEmoji = /^[^\w\u4e00-\u9fff]+\s/u.test(rawHeading);
+      const id = `${startsWithEmoji ? '-' : ''}${rawHeading
         .replace(/[^\w\u4e00-\u9fff\s-]/g, '')
         .trim()
         .replace(/\s+/g, '-')
-        .toLowerCase();
+        .toLowerCase()}`;
       out.push(`<h${level} id="${id}">${text}</h${level}>`);
       i++;
       continue;

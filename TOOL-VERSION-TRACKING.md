@@ -2,6 +2,23 @@
 
 > 這份表只記錄需要綁定版本的短期資訊；長期概念請放在主題文章。每次更新工具特定內容時，附官方來源與查證日期。
 
+## 2026-11-17 官方資料增量複查
+
+> 以官方 GitHub Releases API、GitHub Changelog 與 MCP 官方網站重新核對。以下只記發布狀態與官方公告，不代表本專案已安裝、重現或通過產品行為測試。
+
+| 項目 | 本次查核 | 查證日期 | 官方來源 | 待驗證／解讀邊界 |
+|---|---|---|---|---|
+| Claude Code | v2.1.326 stable（取代 11/15 記錄的 v2.1.325） | 2026-11-17 Asia/Taipei | [v2.1.326 release notes](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 官方 release 發布時間 2026-11-16 22:11 UTC。此版涵蓋 Bash／sandbox 權限檢查、MCP、worktree 與背景任務等多項修正；需在指定版本重做對應安全與功能測試，不能把 release note 當測試 PASS。 |
+| Gemini CLI | v0.68.0 仍是最新 stable；v0.69.0-preview.0 仍為 preview | 2026-11-17 Asia/Taipei | [Gemini CLI releases](https://github.com/google-gemini/gemini-cli/releases) · [release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | 依官方 Releases API 最新非 prerelease 判定；preview 不納入 stable 基準，未安裝／實測。 |
+| Codex CLI | rust-v0.169.0 仍是最新 stable | 2026-11-17 Asia/Taipei | [Codex releases](https://github.com/openai/codex/releases) | 依官方 Releases API 最新非 prerelease 判定；未在本專案安裝／實測。 |
+| MCP Python／TypeScript SDK | v2.3.0／v2.4.0 仍是各自最新 stable | 2026-11-17 Asia/Taipei | [Python SDK releases](https://github.com/modelcontextprotocol/python-sdk/releases) · [TypeScript SDK releases](https://github.com/modelcontextprotocol/typescript-sdk/releases) | SDK 發布版本不等於 client／server 相容性測試。 |
+| MCP protocol | 2026-07-28 仍是最新正式規格；官方 11/11 release-cycle 公告將下一版目標訂為 2027-03-30 | 2026-11-17 Asia/Taipei | [Specification releases](https://github.com/modelcontextprotocol/specification/releases) · [MCP blog：predictable release cycle](https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/) | 下一版日期是官方目標，不是已發布 stable；release planning 改為每年 3 月與 9 月最後一個星期二。 |
+| GitHub Changelog | 2026-11-16 Copilot weekly release（涵蓋 11/9 週）更新 | 2026-11-17 Asia/Taipei | [Copilot weekly releases — Nov 9](https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/) | 公告包含 GitHub Enterprise Server app 支援、模型變更與 MCP re-authentication UX；屬 GitHub／Copilot 產品資訊，不推論第一批三個 CLI 的功能或本專案已啟用。 |
+
+### Claude Code v2.1.326 回歸測試關注點
+
+官方 release notes 特別列出 Bash 刪除／覆寫命令辨識、macOS／Linux／WSL sandbox protections、PreToolUse hook denial telemetry、MCP tool／task 行為，以及 worktree 下 git 命令限制等變更。`AI-CODING-SECURITY.md` 的安全矩陣與相關案例仍為「待實測」；尚未對 v2.1.326 執行產品測試，不得填寫 PASS。
+
 ## 2026-11-15 官方資料複查
 
 > 以下為官方發布與版本狀態複查；不代表本專案已安裝或完成產品行為實測。GitHub Releases API 顯示時間為 UTC；查證日期採 Asia/Taipei。Preview／alpha 僅列觀察，不納入 stable 基準。

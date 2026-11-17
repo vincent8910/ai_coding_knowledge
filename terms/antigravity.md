@@ -26,7 +26,7 @@ Antigravity 是 Google 做的一個**桌面應用程式**，專門讓你跟 AI �
 
 ## 怎麼安裝？
 
-👉 **[Skill 完整教學](../SKILLS.md#前置準備安裝-antigravity)**——裡面有 Windows 的 step-by-step 安裝步驟。
+👉 **[先安裝 Antigravity](../INSTALL.md#路線-a安裝-antigravity推薦新手)**——完成安裝後再回來建立 Skill。
 
 ## 要注意什麼？
 
