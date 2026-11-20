@@ -2,6 +2,21 @@
 
 > 這份表只記錄需要綁定版本的短期資訊；長期概念請放在主題文章。每次更新工具特定內容時，附官方來源與查證日期。
 
+## 2026-11-20 官方資料增量複查
+
+> 查證日期採 Asia/Taipei。版本狀態依 GitHub 官方 Releases API（stable = 非 draft、非 prerelease）；公告與規格提案不代表本專案已安裝、重現或通過產品行為測試。
+
+| 項目 | 本次查核 | 查證日期 | 官方來源 | 待驗證／解讀邊界 |
+|---|---|---|---|---|
+| Claude Code | v2.1.329 stable | 2026-11-20 Asia/Taipei | [v2.1.329 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [changelog](https://code.claude.com/docs/en/changelog) | Releases API 發布時間 2026-11-19 22:14 UTC。新增 hooks 信任提示、`/tasks` 顯示排程工作、MCP 遠端錯誤訊息等；本專案未安裝或回歸測試。 |
+| Gemini CLI | v0.70.0 stable；v0.71.0-preview.0 為 preview | 2026-11-20 Asia/Taipei | [Releases](https://github.com/google-gemini/gemini-cli/releases) · [release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | Releases API 最新非 prerelease 為 v0.70.0（2026-11-19 21:08 UTC）；preview 不納入 stable 基準。v0.70.0 包含 Unicode prompt／session preview、worktree resume 與 interrupted placeholder 等變更；未實測。 |
+| Codex CLI | rust-v0.171.0 stable；rust-v0.172.0-alpha.2 為 alpha | 2026-11-20 Asia/Taipei | [rust-v0.171.0 release](https://github.com/openai/codex/releases/tag/rust-v0.171.0) · [Releases](https://github.com/openai/codex/releases) | stable 發布時間 2026-11-20 00:44 UTC；新增 GPT-6.2 Sol／Astra model catalog、TUI workspace 預設啟用、remote app-server session 與 MCP status line 等；alpha 僅觀察，未實測。 |
+| MCP Python／TypeScript SDK | v2.3.0／v2.4.0 仍為各自最新 stable | 2026-11-20 Asia/Taipei | [Python SDK](https://github.com/modelcontextprotocol/python-sdk/releases) · [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/releases) | 官方 Releases API 最新非 prerelease；SDK 版本不代表 client/server 相容性測試。 |
+| MCP protocol | 2026-07-28 仍為最新正式 schema revision；SEP-3415 Events Extension 為 Final extension proposal | 2026-11-20 Asia/Taipei | [Specification releases](https://github.com/modelcontextprotocol/specification/releases) · [SEP-3415 Events Extension](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/seps/3415-events-extension.md) · [schema history](https://github.com/modelcontextprotocol/modelcontextprotocol/commits/main/schema/) | Releases API 仍以 2026-07-28 為最新正式 revision。SEP-3415 定義 poll、stream、webhook 等事件交付模式，但它是 extension-track SEP，不是新的 stable core protocol revision，也不代表任一 client/server 已支援；官方 schema 仍有修正活動，整體文件 repo 最新 commits 不可直接當成 protocol release。 |
+| GitHub Changelog | 11/19 更新包含 Pull Request Overview public preview 改進、Azure DevOps Enterprise Live Migrations GA、RHEL 9/10 hosted runner images GA，以及 S3 audit-log OIDC 擴展至 GHE.com | 2026-11-20 Asia/Taipei | [2026 年 11 月 Changelog](https://github.blog/changelog/month/11-2026/) · [PR Overview preview](https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview) · [Azure DevOps migrations](https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available) · [RHEL runners](https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available) · [S3 audit logs](https://github.blog/changelog/2026-11-19-s3-audit-log-streaming-with-openid-connect-expands-to-ghe-com) | 皆為 GitHub 平台公告，不推論 Claude Code、Gemini CLI、Codex CLI 能力，也非本專案實測。 |
+
+本次只更新官方發布與提案狀態；未執行指定版本產品測試。安全矩陣與 benchmark 結果維持「待實測」，不填寫 PASS。
+
 ## 2026-11-18 官方資料增量複查
 
 > 查證日期採 Asia/Taipei。版本狀態依 GitHub 官方 Releases API（stable = 非 draft、非 prerelease）；公告只記錄發布資訊，不代表本專案已安裝或完成產品行為測試。
