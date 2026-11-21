@@ -2,6 +2,21 @@
 
 > 這份表只記錄需要綁定版本的短期資訊；長期概念請放在主題文章。每次更新工具特定內容時，附官方來源與查證日期。
 
+## 2026-11-21 官方資料增量複查
+
+> 查證日期採 Asia/Taipei。版本狀態依 GitHub 官方 Releases API（stable = 非 draft、非 prerelease）；公告與規格提案不代表本專案已安裝、重現或通過產品行為測試。
+
+| 項目 | 本次查核 | 查證日期 | 官方來源 | 待驗證／解讀邊界 |
+|---|---|---|---|---|
+| Claude Code | v2.1.330 stable | 2026-11-21 Asia/Taipei | [v2.1.330 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) · [changelog](https://code.claude.com/docs/en/changelog) | 官方 Releases API 發布時間 2026-11-20 22:32 UTC；本次確認版本號，未取得並逐項摘要 release body；未安裝或回歸測試。 |
+| Gemini CLI | v0.70.0 stable | 2026-11-21 Asia/Taipei | [v0.70.0 release](https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0) · [release channels](https://github.com/google-gemini/gemini-cli/blob/main/docs/changelogs/index.md) | 官方 Releases API 最新非 prerelease，發布時間 2026-11-19 21:08 UTC；未實測。 |
+| Codex CLI | rust-v0.171.0 stable | 2026-11-21 Asia/Taipei | [rust-v0.171.0 release](https://github.com/openai/codex/releases/tag/rust-v0.171.0) · [Releases](https://github.com/openai/codex/releases) | 官方 Releases API 最新非 prerelease，發布時間 2026-11-20 00:44 UTC；未實測。 |
+| MCP Python／TypeScript SDK | v2.3.0／v2.4.0 仍為各自最新 stable | 2026-11-21 Asia/Taipei | [Python SDK](https://github.com/modelcontextprotocol/python-sdk/releases) · [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/releases) | 官方 Releases API 最新非 prerelease；SDK 版本不代表 client/server 相容性測試。 |
+| MCP protocol | 2026-07-28 仍為最新正式 schema revision | 2026-11-21 Asia/Taipei | [Specification releases](https://github.com/modelcontextprotocol/specification/releases) · [schema history](https://github.com/modelcontextprotocol/modelcontextprotocol/commits/main/schema/) | Releases API 最新正式 revision 仍為 2026-07-28；schema 路徑最近 commit 為 2026-11-18，文件維護活動不可直接等同 protocol release。 |
+| GitHub Changelog | 11/20 公告 security advisory permissions GA、可將 advisories 權限授予 custom repository roles；另有 dashboard 收藏 repository、GHES 3.23 RC | 2026-11-21 Asia/Taipei | [2026 年 11 月 Changelog](https://github.blog/changelog/month/11-2026/) · [Security advisory permissions](https://github.blog/changelog/2026-11-20-security-advisory-permissions-are-now-generally-available) | 權限需 custom repository roles 支援的方案；屬 GitHub 平台變更，不推論三個 CLI 能力，也非本專案權限設定或產品實測。 |
+
+本次版本查核以官方 API 與 changelog 來源完成；產品安全矩陣與 benchmark 未執行，維持「待實測」，不填寫 PASS。
+
 ## 2026-11-20 官方資料增量複查
 
 > 查證日期採 Asia/Taipei。版本狀態依 GitHub 官方 Releases API（stable = 非 draft、非 prerelease）；公告與規格提案不代表本專案已安裝、重現或通過產品行為測試。
